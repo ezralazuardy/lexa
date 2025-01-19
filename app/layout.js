@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
       <body className={`${Open_Sans.className}`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
