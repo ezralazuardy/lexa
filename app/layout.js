@@ -1,4 +1,4 @@
-import Open_Sans from "@/lib/fonts/open-sans";
+import Inter from "@/lib/fonts/inter";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID} />
-      <body className={`${Open_Sans.className}`}>
+      <body className={`${Inter.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
