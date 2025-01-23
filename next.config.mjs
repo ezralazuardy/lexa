@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    webpackMemoryOptimizations: true,
+    // webpackMemoryOptimizations: true,
     optimizePackageImports: [
       "@radix-ui/react-accordion",
       "@radix-ui/react-avatar",
@@ -28,16 +28,6 @@ const nextConfig = {
       "tailwindcss-animate",
     ],
   },
-  serverExternalPackages: [
-    "@vercel/analytics",
-    "@vercel/speed-insights",
-    "blurhash",
-    "crisp-sdk-web",
-    "motion",
-    "next",
-    "react",
-    "react-dom",
-  ],
   devIndicators: {
     appIsrStatus: false,
   },

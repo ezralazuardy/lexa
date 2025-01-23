@@ -6,7 +6,7 @@ export default function Keypoint() {
     <div className="z-10 flex items-center justify-center mt-24 py-14">
       <div className="flex-col items-center justify-center w-full lg:max-w-screen-lg">
         <h1
-          className={`text-3xl font-regular text-[#171717] text-center leading-none ${Open_Sans.className}`}
+          className={`text-3xl font-medium text-[#171717] text-center leading-none ${Open_Sans.className}`}
         >
           The Future of Legal Research
         </h1>
