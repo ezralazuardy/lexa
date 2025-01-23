@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
@@ -7,72 +5,20 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Open_Sans from "@/lib/fonts/open-sans";
+import ccpaBadge from "@/public/images/ccpa-badge.png";
+import gdprBadge from "@/public/images/gdpr-badge.png";
 import security1 from "@/public/images/security-1.png";
-import Autoplay from "embla-carousel-autoplay";
-import { MessageCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import gdprBadge from "@/public/images/gdpr-badge.png";
-import ccpaBadge from "@/public/images/ccpa-badge.png";
 
 const securities = [
   {
     image: security1,
     imageAlt: "Security 1",
-    icon: <MessageCircle className="w-5 h-5" strokeWidth={1.5} />,
-    iconAlt: "MessageCircle",
-    title: "Assistant",
-    description: "Ask anything about law and legal.",
   },
 ];
 
 export default function Security() {
-  let carouselAutoplayThrottleTimer;
-  const [carouselApi, setCarouselApi] = useState(null);
-
-  const handleGoToSlide = (index) => {
-    if (carouselApi) {
-      carouselApi.scrollTo(index);
-    }
-  };
-
-  const activateItem = (index) => {
-    const item = document.getElementById(`security-item-${index}`);
-    if (!item) return;
-    item.classList.remove("opacity-50");
-    item.classList.add("opacity-100");
-    for (let i = 0; i < securities.length; i++) {
-      if (i !== index) deactivateItem(i);
-    }
-    clearTimeout(carouselAutoplayThrottleTimer);
-    carouselApi.plugins().autoplay.stop();
-    carouselAutoplayThrottleTimer = setTimeout(() => {
-      carouselApi.plugins().autoplay.play();
-    }, 4000);
-  };
-
-  const deactivateItem = (index) => {
-    const item = document.getElementById(`security-item-${index}`);
-    if (!item) return;
-    item.classList.remove("opacity-100");
-    item.classList.add("opacity-50");
-  };
-
-  useEffect(() => {
-    if (!carouselApi) {
-      return;
-    }
-
-    carouselApi.on("select", () => {
-      activateItem(carouselApi.selectedScrollSnap());
-    });
-
-    return () => {
-      clearTimeout(carouselAutoplayThrottleTimer);
-    };
-  }, [carouselApi]);
-
   return (
     <div className="z-10 flex items-center justify-center mt-24 py-14">
       <div className="flex-col items-center justify-center w-full lg:max-w-screen-lg">
@@ -81,15 +27,6 @@ export default function Security() {
             <Carousel
               orientation="vertical"
               className="w-full mr-16 mt-0.5 hover:cursor-pointer"
-              setApi={setCarouselApi}
-              opts={{
-                align: "start",
-              }}
-              plugins={[
-                Autoplay({
-                  delay: 4000,
-                }),
-              ]}
             >
               <CarouselContent className="h-[340px]">
                 {securities.map((security, index) => (

@@ -1,9 +1,9 @@
 "use client";
 
 import Logo from "@/components/ui/logo";
-import { Github, Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { useEffect } from "react";
+import { socials } from "@/lib/state";
 
 export default function Footer() {
   useEffect(() => {
@@ -78,30 +78,17 @@ export default function Footer() {
           </Link>
         </div>
         <div className="flex gap-7 text-neutral-600">
-          <Link
-            href="https://github.com/lazuardytech"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors duration-500 hover:text-black"
-          >
-            <Github className="w-5 h-5" strokeWidth={1.3} />
-          </Link>
-          <Link
-            href="https://instagram.com/lazuardy.tech"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors duration-500 hover:text-black"
-          >
-            <Instagram className="w-5 h-5" strokeWidth={1.3} />
-          </Link>
-          <Link
-            href="https://linkedin.com/company/lazuardy/?viewAsMember=true"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors duration-500 hover:text-black"
-          >
-            <Linkedin className="w-5 h-5" strokeWidth={1.3} />
-          </Link>
+          {socials.map((social, index) => (
+            <Link
+              key={index}
+              href={social.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors duration-500 hover:text-black"
+            >
+              {social.icon}
+            </Link>
+          ))}
         </div>
       </div>
       <div className="flex justify-between items-center mt-6">
