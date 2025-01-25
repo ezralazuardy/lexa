@@ -3,6 +3,8 @@ const nextConfig = {
   experimental: {
     webpackMemoryOptimizations: true,
     optimizePackageImports: [
+      "@fullhuman/postcss-purgecss",
+      "@next/third-parties",
       "@radix-ui/react-accordion",
       "@radix-ui/react-avatar",
       "@radix-ui/react-slot",
@@ -10,6 +12,7 @@ const nextConfig = {
       "@vercel/analytics",
       "@vercel/speed-insights",
       "blurhash",
+      "book-cover-3d",
       "class-variance-authority",
       "clsx",
       "crisp-sdk-web",
@@ -26,6 +29,11 @@ const nextConfig = {
       "sonner",
       "tailwind-merge",
       "tailwindcss-animate",
+      "postcss",
+      "tailwindcss",
+      "eslint",
+      "eslint-config-next",
+      "@eslint/eslintrc",
     ],
   },
   devIndicators: {
