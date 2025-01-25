@@ -1,19 +1,24 @@
 import CTA from "@/components/block/landing/home/cta";
 import Footer from "@/components/block/landing/home/footer";
 import Header from "@/components/block/landing/home/header";
-import Hero from "@/components/block/landing/news/hero";
-import Items from "@/components/block/landing/news/items";
+import Articles from "@/components/block/landing/legal/articles";
+import Hero from "@/components/block/landing/legal/hero";
+import {
+  getLegalLatestUpdateDate,
+  getLegals,
+} from "@/lib/services/legal-service";
 
-export default function Legal() {
+export default async function Legal() {
+  const legals = await getLegals();
+  const latestUpdateDate = await getLegalLatestUpdateDate();
+
   return (
-    <>
-      <div className="relative h-full w-full">
-        <Header />
-        <Hero />
-        <Items />
-        <CTA />
-        <Footer />
-      </div>
-    </>
+    <div className="relative h-full w-full">
+      <Header />
+      <Hero />
+      <Articles legals={legals} latestUpdateDate={latestUpdateDate} />
+      <CTA />
+      <Footer />
+    </div>
   );
 }

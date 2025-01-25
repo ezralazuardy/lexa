@@ -84,3 +84,85 @@ body {
 .tally-page {
     padding: 0;
 }
+
+.article-content p {
+    margin-bottom: 1rem;
+}
+
+.article-content section {
+    margin-bottom: 2rem;
+}
+
+.article-content h1 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+}
+
+.article-content h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+}
+
+.article-content h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+}
+
+.article-content h4 {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+}
+
+.article-content strong {
+    font-weight: 500;
+}
+
+.article-content b {
+    font-weight: 500;
+}
+
+.article-content a {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.article-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    border: 1px solid #262b2f;
+}
+
+.article-content pre {
+    border: 1px solid #262b2f;
+    padding: 1.2rem;
+    font-size: 0.8rem;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.article-content figcaption {
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.article-content ul {
+    margin-bottom: 1rem;
+    padding-left: 1.2rem;
+    list-style-type: disc;
+}
+
+.article-content li {
+    margin-bottom: 0.5rem;
+}
+
+.article-content address {
+    font-style: normal;
+    margin-bottom: 1rem;
+}

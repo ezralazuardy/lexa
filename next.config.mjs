@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    // webpackMemoryOptimizations: true,
+    webpackMemoryOptimizations: true,
     optimizePackageImports: [
       "@radix-ui/react-accordion",
       "@radix-ui/react-avatar",

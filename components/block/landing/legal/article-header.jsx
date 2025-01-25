@@ -1,13 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Open_Sans from "@/lib/fonts/open-sans";
 
-export default function ArticleHeader({
-  type,
-  headline,
-  subheadline,
-  date,
-  writer,
-}) {
+export default function ArticleHeader({ type, headline, date, writer }) {
   return (
     <div className="flex-col flex items-center justify-center w-full">
       <span className="text-sm font-regular text-neutral-600 text-center leading-none uppercase lg:max-w-screen-lg">
@@ -18,9 +12,6 @@ export default function ArticleHeader({
       >
         {headline}
       </h1>
-      <p className="text-lg font-light text-neutral-600 text-center leading-none mt-8 lg:max-w-screen-sm">
-        {subheadline}
-      </p>
       <div className="flex items-center mt-10">
         <p className="text-sm font-regular text-gray-800 leading-none mr-4">
           {date}
