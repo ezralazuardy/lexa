@@ -5,9 +5,9 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Open_Sans from "@/lib/fonts/open-sans";
-import ccpaBadge from "@/public/images/ccpa-badge.png";
-import gdprBadge from "@/public/images/gdpr-badge.png";
-import security1 from "@/public/images/security-1.png";
+import ccpaBadge from "@/public/images/badges/ccpa-badge.png";
+import gdprBadge from "@/public/images/badges/gdpr-badge.png";
+import security1 from "@/public/images/securities/security-1.png";
 import Image from "next/image";
 import Link from "next/link";
 

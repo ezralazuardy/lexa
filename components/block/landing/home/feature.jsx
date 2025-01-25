@@ -6,12 +6,12 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Open_Sans from "@/lib/fonts/open-sans";
-import feature1 from "@/public/images/feature-1.png";
-import feature2 from "@/public/images/feature-2.png";
-import feature3 from "@/public/images/feature-3.png";
-import feature4 from "@/public/images/feature-4.png";
-import feature5 from "@/public/images/feature-5.png";
-import feature6 from "@/public/images/feature-6.png";
+import feature1 from "@/public/images/features/feature-1.png";
+import feature2 from "@/public/images/features/feature-2.png";
+import feature3 from "@/public/images/features/feature-3.png";
+import feature4 from "@/public/images/features/feature-4.png";
+import feature5 from "@/public/images/features/feature-5.png";
+import feature6 from "@/public/images/features/feature-6.png";
 import Autoplay from "embla-carousel-autoplay";
 import {
   Building2,

@@ -55,7 +55,7 @@ export default function Keypoint() {
           {keypoints.map((keypoint, index) => (
             <div
               key={index}
-              className={`text-left border-neutral-200 p-8 transition-colors duration-1000 hover:bg-neutral-100 ${index % 3 !== 2 ? "md:border-r" : ""} ${index >= 3 ? "" : "md:border-b"}`}
+              className={`text-left border-neutral-300 p-8 transition-colors duration-1000 hover:bg-neutral-100 ${index % 3 !== 2 ? "md:border-r" : ""} ${index >= 3 ? "" : "md:border-b"}`}
             >
               <div className="flex flex-col items-start">
                 <keypoint.icon className="mr-2 mb-4" strokeWidth={1.3} />

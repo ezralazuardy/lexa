@@ -1,6 +1,6 @@
-import customer1 from "@/public/images/customer-1.png";
-import customer2 from "@/public/images/customer-2.png";
-import customer3 from "@/public/images/customer-3.png";
+import customer1 from "@/public/images/customers/customer-1.png";
+import customer2 from "@/public/images/customers/customer-2.png";
+import customer3 from "@/public/images/customers/customer-3.png";
 import Image from "next/image";
 import Link from "next/link";
 

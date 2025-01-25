@@ -6,10 +6,10 @@ import ArticleHeader from "@/components/block/landing/news/article-header";
 import ArticleImage from "@/components/block/landing/news/article-image";
 import { getNewsByUuid } from "@/lib/services/news-service";
 
-export default function Article({ params }) {
+export default async function Article({ params }) {
   const { slug } = params;
 
-  const data = getNewsByUuid(slug);
+  const data = await getNewsByUuid(slug);
 
   return (
     <div className="relative h-full w-full">

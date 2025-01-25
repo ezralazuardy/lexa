@@ -19,7 +19,7 @@ export default function Form() {
   return (
     <div className="flex items-center justify-center mt-12">
       <div className="flex-col items-center justify-center w-full lg:max-w-screen-md">
-        <hr className="border-neutral-400 w-full mb-4" />
+        <hr className="border-neutral-300 w-full mb-4" />
         <iframe
           data-tally-src={process.env.NEXT_PUBLIC_TALLY_CONTACT_SALES}
           loading="lazy"
@@ -27,7 +27,7 @@ export default function Form() {
           height="100%"
           className="min-h-[70vh]"
         ></iframe>
-        <hr className="border-neutral-400 w-full mt-6 mb-4" />
+        <hr className="border-neutral-300 w-full mt-6 mb-4" />
         <div className="flex w-full">
           <div className="w-1/2 flex justify-start items-start">
             <p className="text-xs font-light text-neutral-600 leading-snug">
