@@ -24,7 +24,7 @@ export default function Hero() {
                 Contact Sales
               </Button>
             </Link>
-            <Link href="/beta">
+            <Link href="/beta" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="secondary">
                 <TestTubeDiagonal />
                 Register to Private Beta

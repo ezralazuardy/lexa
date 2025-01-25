@@ -84,6 +84,8 @@ export default function Header() {
             <Link
               ref={registerButton}
               href="/beta"
+              target="_blank"
+              rel="noopener noreferrer"
               className="absolute z-0 top-0 right-0 mt-7 transition-all ease-out opacity-0"
             >
               <Button size="sm">REGISTER</Button>

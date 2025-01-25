@@ -11,7 +11,7 @@ export default function Hero() {
         <div className="flex-col items-center justify-center w-full lg:max-w-screen-lg">
           <HeroTitle />
           <div className="flex items-center justify-center mt-10">
-            <Link href="/beta">
+            <Link href="/beta" target="_blank" rel="noopener noreferrer">
               <Button id="hero-register-button" size="lg">
                 <TestTubeDiagonal />
                 Register to Private Beta

@@ -14,20 +14,19 @@ export default function Form() {
     return () => {
       document.body.removeChild(script);
     };
-  }, []);
+  });
 
   return (
     <>
       <div className="flex items-center justify-center mt-12">
-        <div className="flex-col items-center justify-center w-full lg:max-w-screen-md min-h-[80vh] mb-12">
+        <div className="flex-col items-center justify-center w-full lg:max-w-screen-md">
           <hr className="border-neutral-400 w-full mb-4" />
           <iframe
-            data-tally-src="https://tally.so/embed/wo5b9O?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            data-tally-src={process.env.NEXT_PUBLIC_TALLY_CONTACT_SALES}
             loading="lazy"
             width="100%"
             height="100%"
-            marginWidth={0}
-            marginHeight={0}
+            className="min-h-[70vh]"
           ></iframe>
           <hr className="border-neutral-400 w-full mt-6 mb-4" />
           <div className="flex w-full">

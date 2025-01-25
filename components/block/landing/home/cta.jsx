@@ -25,7 +25,7 @@ export default function CTA() {
               Ready to Boost Your Legal Workflow?
             </h1>
             <div className="flex items-center justify-center mt-8">
-              <Link href="/beta">
+              <Link href="/beta" target="_blank" rel="noopener noreferrer">
                 <Button id="hero-register-button" variant="secondary" size="lg">
                   <TestTubeDiagonal />
                   Register to Private Beta
