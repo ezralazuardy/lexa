@@ -5,7 +5,7 @@ import Hero from "@/components/block/landing/security/hero";
 
 export default function Home() {
   return (
-    <div className="relative w-full h-full">
+    <div className="relative h-full w-full">
       <Header />
       <Hero />
       <CTA />

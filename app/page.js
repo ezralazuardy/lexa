@@ -10,18 +10,16 @@ import Security from "@/components/block/landing/home/security";
 
 export default function Home() {
   return (
-    <>
-      <div className="relative w-full h-full">
-        <Header />
-        <Hero />
-        <Customer />
-        <Keypoint />
-        <Feature />
-        <Security />
-        <FAQ />
-        <CTA />
-        <Footer />
-      </div>
-    </>
+    <div className="relative h-full w-full">
+      <Header />
+      <Hero />
+      <Customer />
+      <Keypoint />
+      <Feature />
+      <Security />
+      <FAQ />
+      <CTA />
+      <Footer />
+    </div>
   );
 }

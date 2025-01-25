@@ -5,13 +5,11 @@ import Hero from "@/components/block/landing/products/hero";
 
 export default function Home() {
   return (
-    <>
-      <div className="relative w-full">
-        <Header />
-        <Hero />
-        <CTA />
-        <Footer />
-      </div>
-    </>
+    <div className="relative h-full w-full">
+      <Header />
+      <Hero />
+      <CTA />
+      <Footer />
+    </div>
   );
 }

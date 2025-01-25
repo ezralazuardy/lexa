@@ -11,7 +11,7 @@ export default async function Article({ params }) {
   const data = await getLegalByUuid(slug);
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative h-full w-full">
       <Header />
       <div className="flex-col flex items-center justify-center mt-[20vh]">
         <div className="flex-col items-center justify-center w-full mb-16">

@@ -26,10 +26,10 @@ export default function ArticleBreadcrumb({ path }) {
           <BreadcrumbList>
             {pathArray.map((segment, index) => (
               <React.Fragment key={index}>
-                <BreadcrumbItem className="text-md text-neutral-600 font-light">
+                <BreadcrumbItem className="text-sm font-regular text-neutral-600">
                   {index < pathArray.length - 1 ? (
                     <Link
-                      className="transition-color duration-1000 hover:text-black"
+                      className="transition-colors duration-1000 hover:text-black"
                       href={`/${pathArray
                         .slice(0, index + 1)
                         .join("/")
@@ -39,7 +39,22 @@ export default function ArticleBreadcrumb({ path }) {
                     </Link>
                   ) : (
                     <span>
-                      {segment.charAt(0).toUpperCase() + segment.slice(1)}
+                      {segment
+                        .split(" ")
+                        .map((word, idx) =>
+                          [
+                            "and",
+                            "or",
+                            "but",
+                            "nor",
+                            "so",
+                            "for",
+                            "yet",
+                          ].includes(word.toLowerCase()) && idx !== 0
+                            ? word.toLowerCase()
+                            : word.charAt(0).toUpperCase() + word.slice(1),
+                        )
+                        .join(" ")}
                     </span>
                   )}
                 </BreadcrumbItem>

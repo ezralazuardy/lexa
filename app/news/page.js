@@ -6,14 +6,12 @@ import Hero from "@/components/block/landing/news/hero";
 
 export default function News() {
   return (
-    <>
-      <div className="relative h-full w-full">
-        <Header />
-        <Hero />
-        <Articles />
-        <CTA />
-        <Footer />
-      </div>
-    </>
+    <div className="relative h-full w-full">
+      <Header />
+      <Hero />
+      <Articles />
+      <CTA />
+      <Footer />
+    </div>
   );
 }
