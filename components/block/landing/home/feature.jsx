@@ -6,72 +6,16 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Open_Sans from "@/lib/fonts/open-sans";
-import feature1 from "@/public/images/features/feature-1.png";
-import feature2 from "@/public/images/features/feature-2.png";
-import feature3 from "@/public/images/features/feature-3.png";
-import feature4 from "@/public/images/features/feature-4.png";
-import feature5 from "@/public/images/features/feature-5.png";
-import feature6 from "@/public/images/features/feature-6.png";
+import { getFeatures } from "@/lib/services/feature-service";
 import Autoplay from "embla-carousel-autoplay";
-import {
-  Building2,
-  Filter,
-  FolderLock,
-  MessageCircle,
-  Search,
-  Users,
-} from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const features = [
-  {
-    image: feature1,
-    imageAlt: "Feature 1",
-    icon: <MessageCircle className="w-5 h-5" strokeWidth={1.5} />,
-    title: "Assistant",
-    description: "Ask anything about law and legal.",
-  },
-  {
-    image: feature2,
-    imageAlt: "Feature 2",
-    icon: <Search className="w-5 h-5" strokeWidth={1.5} />,
-    title: "Research",
-    description: "Find the legal information instantly.",
-  },
-  {
-    image: feature3,
-    imageAlt: "Feature 3",
-    icon: <FolderLock className="w-5 h-5" strokeWidth={1.5} />,
-    title: "Vault",
-    description: "Store legal documents securely.",
-  },
-  {
-    image: feature4,
-    imageAlt: "Feature 4",
-    icon: <Filter className="w-5 h-5" strokeWidth={1.5} />,
-    title: "Query",
-    description: "Extract key legal details easily.",
-  },
-  {
-    image: feature5,
-    imageAlt: "Feature 5",
-    icon: <Building2 className="w-5 h-5" strokeWidth={1.5} />,
-    title: "Client",
-    description: "Track all clients in one place.",
-  },
-  {
-    image: feature6,
-    imageAlt: "Feature 6",
-    icon: <Users className="w-5 h-5" strokeWidth={1.5} />,
-    title: "Team",
-    description: "Work together seamlessly.",
-  },
-];
-
 export default function Feature() {
-  let carouselAutoplayThrottleTimer;
+  const features = getFeatures();
+
   const [carouselApi, setCarouselApi] = useState(null);
+  let carouselAutoplayThrottleTimer;
 
   const handleGoToSlide = (index) => {
     if (carouselApi) {
@@ -136,7 +80,9 @@ export default function Feature() {
                   className={`flex items-start space-x-4 hover:cursor-pointer transition-opacity duration-1000 ${index === 0 ? "opacity-100" : "opacity-50"}`}
                   onClick={() => handleGoToSlide(index)}
                 >
-                  <div className="mt-0.5">{feature.icon}</div>
+                  <div className="mt-0.5">
+                    <feature.icon className="w-5 h-5" strokeWidth={1.5} />
+                  </div>
                   <div>
                     <h2 className="text-md font-regular font-neutral-800">
                       {feature.title}
@@ -169,7 +115,7 @@ export default function Feature() {
                     <div className="relative flex-col items-center justify-center w-full lg:max-w-screen-lg h-[300px] rounded-lg">
                       <Image
                         src={feature.image}
-                        alt={feature.imageAlt}
+                        alt={feature.title}
                         placeholder="blur"
                         layout="fill"
                         className="fixed z-10 select-none object-cover w-full h-auto rounded-lg"

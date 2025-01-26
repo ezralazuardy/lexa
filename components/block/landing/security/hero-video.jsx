@@ -35,7 +35,7 @@ export default function HeroVideo({ children }) {
 
   return (
     <div className="flex items-center justify-center w-full lg:max-w-screen-lg">
-      <div className="relative max-w-1/2 w-full h-[68vh]">
+      <div className="relative max-w-1/2 w-full h-[70vh]">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-lg">
           <Blurhash
             hash="L3Amo9004nRjxu?bM{IU00t7~qRj"

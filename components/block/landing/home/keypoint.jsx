@@ -70,7 +70,7 @@ export default function Keypoint() {
           ))}
         </div>
         <div className="flex justify-center mt-10">
-          <Button variant="outline" size="lg">
+          <Button variant="outline" size="lg" asChild>
             <Link href="/products">Learn More</Link>
           </Button>
         </div>

@@ -61,11 +61,9 @@ export default function Security() {
                 Our platform is compliant with GDPR and CCPA to ensure your data
                 is safe and secure.
               </p>
-              <Link href="/security">
-                <Button variant="outline" size="default">
-                  Learn More
-                </Button>
-              </Link>
+              <Button variant="outline" size="default" asChild>
+                <Link href="/security">Learn More</Link>
+              </Button>
               <div className="flex space-x-4 mt-6">
                 <Image
                   src={gdprBadge}
