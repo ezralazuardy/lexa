@@ -1,4 +1,3 @@
-import Open_Sans from "@/lib/fonts/open-sans";
 import { Bookmark, Database, Languages, Text } from "lucide-react";
 
 export default function UseCase() {
@@ -35,11 +34,11 @@ export default function UseCase() {
         <span className="text-neutral-600 font-regular text-sm text-center">
           Use Cases
         </span>
-        <div className="flex flex-col w-full mt-2">
-          <h1
-            className={`text-4xl font-medium text-[#171717] text-center leading-snug ${Open_Sans.className}`}
-          >
-            We turn Lawyer into Super-Lawyer
+        <div className="flex flex-col w-full mt-6">
+          <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-6xl font-medium leading-none text-transparent dark:from-white dark:to-slate-900/10">
+            We turn Lawyer
+            <br />
+            into Super-Lawyer
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 mt-8">
             {usecases.map((usecase, index) => (

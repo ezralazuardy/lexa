@@ -37,7 +37,7 @@ export function FeatureItem({ feature, inverted = false }) {
             </h1>
           </div>
           <p
-            className="mt-6 text-md font-light text-neutral-600 text-justify"
+            className="mt-6 text-sm font-light text-neutral-600 text-justify"
             dangerouslySetInnerHTML={{ __html: feature.long_description }}
           ></p>
           <div className="mt-10 flex justify-start">
@@ -111,7 +111,7 @@ export function InvertedFeatureItem({ feature }) {
             </h1>
           </div>
           <p
-            className="mt-6 text-md font-light text-neutral-600 text-justify"
+            className="mt-6 text-sm font-light text-neutral-600 text-justify"
             dangerouslySetInnerHTML={{ __html: feature.long_description }}
           ></p>
           <div className="mt-10 flex justify-start">

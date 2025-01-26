@@ -28,10 +28,13 @@ export default function Tagline() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center mt-24">
+    <div className="flex flex-col items-center justify-center mt-32">
       <div className="flex flex-col w-full lg:max-w-screen-lg">
+        <span className="text-neutral-600 font-regular text-sm text-start">
+          Features
+        </span>
         <h1
-          className={`text-6xl font-light text-[#171717] text-left leading-none ${Open_Sans.className}`}
+          className={`text-6xl font-light text-[#171717] text-left leading-none mt-6 ${Open_Sans.className}`}
         >
           Simple legal platform that makes
         </h1>

@@ -50,8 +50,10 @@ export default function HeroVideo({ children }) {
         <video
           ref={video}
           className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 rounded-lg"
-          muted
+          autoPlay
           loop
+          muted
+          playsInline
         >
           <source src="videos/product-hero.webm" type="video/webm" />
           <source src="videos/product-hero.mp4" type="video/mp4" />
