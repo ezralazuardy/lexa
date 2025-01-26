@@ -53,8 +53,8 @@ export default function HeroVideo({ children }) {
           muted
           loop
         >
-          <source src="videos/products-hero.webm" type="video/webm" />
-          <source src="videos/products-hero.mp4" type="video/mp4" />
+          <source src="videos/product-hero.webm" type="video/webm" />
+          <source src="videos/product-hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute top-0 left-0 z-10 w-full h-full bg-black opacity-40 rounded-lg"></div>

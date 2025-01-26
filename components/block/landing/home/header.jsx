@@ -56,10 +56,10 @@ export default function Header() {
             >
               <div className="flex gap-7">
                 <Link
-                  href="/products"
-                  className={`transition-colors duration-500 hover:text-black mt-8 ${pathname === "/products" ? "text-black font-semibold" : ""}`}
+                  href="/product"
+                  className={`transition-colors duration-500 hover:text-black mt-8 ${pathname === "/product" ? "text-black font-semibold" : ""}`}
                 >
-                  Products
+                  Product
                 </Link>
                 <Link
                   href="/security"

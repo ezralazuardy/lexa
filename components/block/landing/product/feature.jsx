@@ -13,21 +13,19 @@ export default function Feature() {
   const features = getFeatures();
 
   return (
-    <div className="z-10 flex flex-col items-center justify-center pt-20">
-      {features.map((feature, index) =>
-        index % 2 === 0 ? (
-          <InvertedFeatureItem key={index} feature={feature} />
-        ) : (
-          <FeatureItem key={index} feature={feature} />
-        ),
-      )}
+    <div className="flex flex-col items-center justify-center">
+      {features.map((feature, index) => (
+        <FeatureItem key={index} feature={feature} inverted={index % 2 !== 0} />
+      ))}
     </div>
   );
 }
 
-export function FeatureItem({ feature }) {
+export function FeatureItem({ feature, inverted = false }) {
+  if (inverted) return <InvertedFeatureItem feature={feature} />;
+
   return (
-    <div className="flex-col items-center justify-center w-full lg:max-w-screen-lg py-20">
+    <div className="flex-col items-center justify-center w-full lg:max-w-screen-lg mt-24">
       <div className="flex columns-2 w-full">
         <div className="flex flex-col w-full">
           <div className="flex">
@@ -77,7 +75,7 @@ export function FeatureItem({ feature }) {
 
 export function InvertedFeatureItem({ feature }) {
   return (
-    <div className="flex-col items-center justify-center w-full lg:max-w-screen-lg py-20">
+    <div className="flex-col items-center justify-center w-full lg:max-w-screen-lg mt-24">
       <div className="flex columns-2 w-full">
         <div className="flex w-full justify-start items-start pt-2 max-w-lg">
           <Carousel

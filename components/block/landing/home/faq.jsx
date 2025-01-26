@@ -61,7 +61,7 @@ export default function FAQ() {
               </Button>
             </Link>
           </div>
-          <div className="flex w-full justify-end items-end pt-4 max-w-lg">
+          <div className="flex w-full justify-end items-end max-w-lg">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem value={`faq-item-${index}`} key={index}>

@@ -1,5 +1,5 @@
-import HeroTitle from "@/components/block/landing/products/hero-title";
-import HeroVideo from "@/components/block/landing/products/hero-video";
+import HeroTitle from "@/components/block/landing/product/hero-title";
+import HeroVideo from "@/components/block/landing/product/hero-video";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { TestTubeDiagonal } from "lucide-react";
@@ -12,7 +12,7 @@ export default function Hero() {
         <div className="z-20 flex-col items-center justify-center w-full lg:max-w-screen-lg pb-4">
           <div className="flex items-center justify-center">
             <Badge className="text-white font-light" variant="outline">
-              Products
+              Product
             </Badge>
           </div>
           <div className="flex items-center justify-center mt-8">

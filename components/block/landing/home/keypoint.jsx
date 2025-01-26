@@ -3,46 +3,46 @@ import Open_Sans from "@/lib/fonts/open-sans";
 import { BookOpen, Brain, Cog, Scale, Scaling, Shield } from "lucide-react";
 import Link from "next/link";
 
-const keypoints = [
-  {
-    icon: BookOpen,
-    title: "Human-Readable",
-    description:
-      "Transform complex legal documents into clear, actionable insights you can trust.",
-  },
-  {
-    icon: Scaling,
-    title: "Scalable",
-    description:
-      "Powerful platform that grows with your practice, from solo work to enterprise teams.",
-  },
-  {
-    icon: Cog,
-    title: "Customizable",
-    description:
-      "Tailor the experience to your needs with custom templates and workflow automation.",
-  },
-  {
-    icon: Shield,
-    title: "Reliable",
-    description:
-      "Enterprise-grade security ensures your data and workflows are always protected.",
-  },
-  {
-    icon: Brain,
-    title: "Actionable",
-    description:
-      "AI-driven insights deliver real-time recommendations to support decisions.",
-  },
-  {
-    icon: Scale,
-    title: "Adaptable",
-    description:
-      "Integrates easily with your current legal tools and workflows for a seamless experience.",
-  },
-];
-
 export default function Keypoint() {
+  const keypoints = [
+    {
+      icon: BookOpen,
+      title: "Human-Readable",
+      description:
+        "Transform complex legal documents into clear, actionable insights you can trust.",
+    },
+    {
+      icon: Scaling,
+      title: "Scalable",
+      description:
+        "Powerful platform that grows with your practice, from solo work to enterprise teams.",
+    },
+    {
+      icon: Cog,
+      title: "Customizable",
+      description:
+        "Tailor the experience to your needs with custom templates and workflow automation.",
+    },
+    {
+      icon: Shield,
+      title: "Reliable",
+      description:
+        "Enterprise-grade security ensures your data and workflows are always protected.",
+    },
+    {
+      icon: Brain,
+      title: "Actionable",
+      description:
+        "AI-driven insights deliver real-time recommendations to support decisions.",
+    },
+    {
+      icon: Scale,
+      title: "Adaptable",
+      description:
+        "Integrates easily with your current legal tools and workflows for a seamless experience.",
+    },
+  ];
+
   return (
     <div className="z-10 flex items-center justify-center mt-24 py-14">
       <div className="flex-col items-center justify-center w-full lg:max-w-screen-lg">
@@ -71,7 +71,7 @@ export default function Keypoint() {
         </div>
         <div className="flex justify-center mt-10">
           <Button variant="outline" size="lg" asChild>
-            <Link href="/products">Learn More</Link>
+            <Link href="/product">Learn More</Link>
           </Button>
         </div>
       </div>

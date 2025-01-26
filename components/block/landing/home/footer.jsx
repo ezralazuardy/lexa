@@ -52,10 +52,10 @@ export default function Footer() {
         </Link>
         <div className="flex gap-7 text-sm font-regular leading-none text-neutral-600 pl-8">
           <Link
-            href="/products"
-            className={`transition-colors duration-500 hover:text-black ${pathname === "/products" ? "text-black font-semibold" : ""}`}
+            href="/product"
+            className={`transition-colors duration-500 hover:text-black ${pathname === "/product" ? "text-black font-semibold" : ""}`}
           >
-            Products
+            Product
           </Link>
           <Link
             href="/security"
