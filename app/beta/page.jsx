@@ -24,7 +24,7 @@ export default function Beta() {
     <div className="relative h-full w-full min-h-screen overflow-hidden">
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center z-20">
-          <Loader className="animate-spin h-12 w-12 text-gray-900" />
+          <Loader className="animate-spin h-10 w-10 text-gray-900" />
         </div>
       )}
       <iframe

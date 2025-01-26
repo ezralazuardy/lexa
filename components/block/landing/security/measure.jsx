@@ -30,8 +30,8 @@ export default function Measure() {
   ];
 
   return (
-    <div className="flex items-center justify-center mt-24 mb-32">
-      <div className="flex-col items-center justify-center w-full lg:max-w-screen-lg">
+    <div className="flex flex-col items-center justify-center mt-24 mb-32">
+      <div className="flex flex-col items-center justify-center w-full lg:max-w-screen-lg">
         <span className="text-neutral-600 font-regular text-sm text-center">
           Security Measures
         </span>

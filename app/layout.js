@@ -14,7 +14,7 @@ export const metadata = {
     "Empowering Legal Professional throug Cutting-edge AI Solutions.",
   generator: "Next.js",
   applicationName: "LEXA",
-  referrer: "origin-when-cross-origin",
+  referrer: "strict-origin-when-cross-origin",
   creator: "Lazuardy",
   publisher: "Lazuardy",
   manifest: `${process.env.NEXT_PUBLIC_APP_URL}/manifest.json`,
