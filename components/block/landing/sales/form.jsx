@@ -20,17 +20,20 @@ export default function Form() {
     <div className="flex items-center justify-center mt-12">
       <div className="flex-col items-center justify-center w-full lg:max-w-screen-md">
         <hr className="border-neutral-300 w-full mb-4" />
-        <iframe
-          data-tally-src={process.env.NEXT_PUBLIC_TALLY_CONTACT_SALES}
-          loading="lazy"
-          width="100%"
-          height="100%"
-          className="min-h-[70vh]"
-        ></iframe>
+        <div className="relative w-full min-h-[70vh]">
+          <iframe
+            data-tally-src={process.env.NEXT_PUBLIC_TALLY_CONTACT_SALES}
+            loading="lazy"
+            width="100%"
+            height="100%"
+            className="w-full h-auto"
+          ></iframe>
+          <div className="absolute right-0 bottom-0 w-[35vw] h-[8vh] bg-white"></div>
+        </div>
         <hr className="border-neutral-300 w-full mt-6 mb-4" />
         <div className="flex w-full">
           <div className="w-1/2 flex justify-start items-start">
-            <p className="text-xs font-light text-neutral-600 leading-snug">
+            <p className="text-xs font-light text-neutral-600 leading-normal">
               Your information is safe with us.
               <br />
               Please read our{" "}
