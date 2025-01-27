@@ -7,7 +7,7 @@ import ArticleImage from "@/components/block/landing/news/article-image";
 import { getNewsByUuid } from "@/lib/services/news-service";
 
 export default async function Article({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
 
   const data = await getNewsByUuid(slug);
 
