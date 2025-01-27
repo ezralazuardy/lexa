@@ -15,9 +15,11 @@ export default async function Legal() {
   return (
     <div className="relative h-full w-full">
       <Header />
-      <Hero />
-      <Articles legals={legals} latestUpdateDate={latestUpdateDate} />
-      <CTA />
+      <div className="flex flex-col w-full h-full min-h-screen">
+        <Hero />
+        <Articles legals={legals} latestUpdateDate={latestUpdateDate} />
+      </div>
+      <CTA className="mt-24" />
       <Footer />
     </div>
   );

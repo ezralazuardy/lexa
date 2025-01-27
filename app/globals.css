@@ -158,6 +158,13 @@ body {
     list-style-type: disc;
 }
 
+@media (max-width: 640px) {
+    .article-content ul {
+        padding-left: 0.8rem;
+        padding-right: 1rem;
+    }
+}
+
 .article-content li {
     margin-bottom: 0.5rem;
 }

@@ -13,11 +13,11 @@ export default async function Article({ params }) {
   return (
     <div className="relative h-full w-full">
       <Header />
-      <div className="flex-col flex items-center justify-center mt-[20vh]">
-        <div className="flex-col items-center justify-center w-full mb-16">
+      <div className="flex-col flex items-center justify-center mt-[17vh] lg:mt-[20vh]">
+        <div className="flex-col items-center justify-center w-full mb-16 px-8 md:px-0">
           <ArticleBreadcrumb path={`/legal/${slug}`} />
         </div>
-        <div className="flex-col items-center justify-center w-full mb-16">
+        <div className="flex-col items-center justify-center w-full mb-12 px-8 md:px-0">
           <ArticleHeader
             type={data.type}
             headline={data.headline}
@@ -25,7 +25,7 @@ export default async function Article({ params }) {
             writer={data.writer}
           />
         </div>
-        <div className="flex-col items-center justify-center w-full mb-10">
+        <div className="flex-col items-center justify-center w-full mb-12">
           <ArticleContent content={data.content} />
         </div>
       </div>

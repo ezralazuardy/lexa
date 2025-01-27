@@ -10,7 +10,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Form />
-      <CTA />
+      <CTA className="mt-24" />
       <Footer />
     </div>
   );

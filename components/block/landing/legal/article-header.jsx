@@ -8,11 +8,11 @@ export default function ArticleHeader({ type, headline, date, writer }) {
         {type}
       </span>
       <h1
-        className={`text-7xl font-medium text-[#171717] text-center leading-none mt-8 md:max-w-screen-lg ${Open_Sans.className}`}
+        className={`text-4xl md:text-7xl font-medium text-[#171717] text-center leading-snug mt-6 md:mt-8 md:max-w-screen-lg px-8 md:px-0 ${Open_Sans.className}`}
       >
         {headline}
       </h1>
-      <div className="flex items-center mt-10">
+      <div className="flex items-center mt-6 md:mt-10 px-8 md:px-0">
         <p className="text-sm font-regular text-gray-800 leading-none mr-4">
           {date}
         </p>

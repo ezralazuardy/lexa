@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Articles({ news }) {
   return (
-    <div className="flex items-center justify-center mt-14 mb-20">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full md:max-w-screen-lg">
+    <div className="flex flex-col items-center justify-center mt-14">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-12 md:w-full md:max-w-screen-lg">
         {news.map((data) => (
           <Item key={data.uuid} data={data} />
         ))}
@@ -25,18 +25,15 @@ export function Item({ data }) {
         alt={data.headline}
         src={`/images/news/${data.uuid}.png`}
         blurhash={data.blurhash}
-        layout="responsive"
         draggable="false"
-        width={500}
-        height={280}
       />
-      <h2 className="text-lg font-medium text-[#171717] mt-4 leading-snug">
+      <h2 className="text-lg font-medium text-[#171717] mt-6 md:mt-4 leading-snug px-8 md:px-0">
         {data.headline}
       </h2>
-      <p className="text-sm font-light text-gray-600 mt-2 leading-snug">
+      <p className="text-sm font-light text-gray-600 mt-2 leading-snug text-justify md:text-left px-8 md:px-0">
         {data.subheadline}
       </p>
-      <div className="flex items-center mt-4">
+      <div className="flex items-center mt-4 px-8 md:px-0">
         <Avatar className="mr-3 w-8 h-8">
           <AvatarImage src={data.writer.avatar} alt={data.writer.name} />
           <AvatarFallback>{data.writer.avatar_fallback}</AvatarFallback>

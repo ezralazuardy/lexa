@@ -11,12 +11,14 @@ export default function Item({ data }) {
       rel="noopener noreferrer"
       className="relative w-full transition-all duration-1000 hover:scale-110 mb-20"
     >
-      <BookCover width={150} height={230}>
+      <BookCover width={140} height={220}>
         <Image
           alt={data.headline}
           src={`/images/legal/${data.uuid}.png`}
-          width={400}
-          height={500}
+          width={150}
+          height={230}
+          className="select-none object-cover w-full h-full"
+          draggable="false"
         />
       </BookCover>
     </Link>
