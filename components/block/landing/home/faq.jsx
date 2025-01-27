@@ -50,16 +50,16 @@ export default function FAQ() {
             >
               Let's Clear Things Up
             </h1>
-            <p className="mt-4 mb-6 text-md font-light text-neutral-600 text-justify md:pr-12">
+            <p className="mt-4 text-md font-light text-neutral-600 text-justify md:pr-12">
               Legal innovation can be complex. We break it down into
               easy-to-understand insights. If you have any questions, feel free
               to reach out to our team.
             </p>
-            <Link href="/sales">
-              <Button variant="default" size="default">
-                Contact Sales
+            <div className="w-full mt-6">
+              <Button variant="default" size="default" asChild>
+                <Link href="/sales">Contact Sales</Link>
               </Button>
-            </Link>
+            </div>
           </div>
           <div className="flex w-full md:w-1/2 justify-end items-end max-w-lg mt-6 md:mt-0">
             <Accordion type="single" collapsible className="w-full">

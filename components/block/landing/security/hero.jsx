@@ -7,10 +7,10 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="flex items-center justify-center mt-[20vh]">
+    <div className="flex items-center justify-center md:mt-[20vh]">
       <HeroVideo>
         <div className="z-20 flex-col items-center justify-center w-full md:max-w-screen-lg pb-4">
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center mt-[8vh] md:mt-0">
             <Badge className="text-white font-light" variant="outline">
               Security
             </Badge>
@@ -18,7 +18,7 @@ export default function Hero() {
           <div className="flex items-center justify-center mt-8">
             <HeroTitle />
           </div>
-          <div className="flex space-x-6 items-center justify-center mt-10">
+          <div className="flex flex-col space-y-6 md:flex-row md:space-x-6 md:space-y-0 items-center justify-center mt-10 px-8 md:px-0">
             <Link href="/sales">
               <Button id="hero-register-button" size="lg" variant="secondary">
                 Contact Sales

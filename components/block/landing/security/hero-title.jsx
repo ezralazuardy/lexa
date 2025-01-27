@@ -2,10 +2,10 @@ import Open_Sans from "@/lib/fonts/open-sans";
 
 export default function HeroTitle() {
   return (
-    <div className="flex flex-col items-center justify-center w-full">
+    <div className="flex flex-col items-center justify-center w-full px-8 md:px-0">
       <div className="flex w-full max-w-3xl justify-center">
         <h1
-          className={`text-6xl font-light text-white text-center leading-none ${Open_Sans.className}`}
+          className={`text-5xl md:text-6xl font-light text-white text-center leading-snug ${Open_Sans.className}`}
         >
           Enterprise Grade Security
         </h1>

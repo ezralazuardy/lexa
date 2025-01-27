@@ -35,8 +35,8 @@ export default function HeroVideo({ children }) {
 
   return (
     <div className="flex items-center justify-center w-full md:max-w-screen-lg">
-      <div className="relative max-w-1/2 w-full h-[70vh]">
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-lg">
+      <div className="relative max-w-1/2 w-full h-screen md:h-[70vh]">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden md:rounded-lg">
           <Blurhash
             hash="L3Amo9004nRjxu?bM{IU00t7~qRj"
             width="100%"
@@ -49,17 +49,17 @@ export default function HeroVideo({ children }) {
         </div>
         <video
           ref={video}
-          className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 rounded-lg"
+          className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 md:rounded-lg"
           autoPlay
           loop
           muted
           playsInline
         >
-          <source src="videos/security-hero.webm" type="video/webm" />
-          <source src="videos/security-hero.mp4" type="video/mp4" />
+          <source src="videos/product-hero.webm" type="video/webm" />
+          <source src="videos/product-hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute top-0 left-0 z-10 w-full h-full bg-black opacity-60 rounded-lg"></div>
+        <div className="absolute top-0 left-0 z-10 w-full h-full bg-black opacity-40 md:rounded-lg"></div>
         <div className="absolute top-0 left-0 z-20 flex items-center justify-center w-full h-full">
           {children}
         </div>
