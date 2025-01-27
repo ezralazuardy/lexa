@@ -16,12 +16,18 @@ export default function HeroTitle() {
   return (
     <div className="flex-col items-center justify-center w-full">
       <h1
-        className={`text-6xl font-medium text-[#171717] text-center leading-none ${Open_Sans.className}`}
+        className={`text-4xl md:text-6xl font-medium text-[#171717] text-center leading-snug ${Open_Sans.className}`}
       >
-        Intelligent Legal Assistant for
-        <WordRotate words={words} duration="4000" />
+        <span className="md:mr-4">Intelligence Legal</span>
+        <br className="md:hidden" />
+        Assistant for
+        <WordRotate
+          words={words}
+          duration="4000"
+          className="-mt-2 pt-0.5 min-h-[13vh] md:min-h-max"
+        />
       </h1>
-      <p className="text-lg font-regular text-neutral-600 text-center leading-none mt-8">
+      <p className="text-sm md:text-md md:text-lg font-light text-neutral-600 text-center leading-snug mt-2 md:mt-8">
         Streamline your Legal Workflows with Advanced AI-Powered Solutions.
       </p>
     </div>

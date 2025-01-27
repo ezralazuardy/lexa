@@ -31,7 +31,7 @@ export default function Measure() {
 
   return (
     <div className="flex flex-col items-center justify-center mt-24 mb-32">
-      <div className="flex flex-col items-center justify-center w-full lg:max-w-screen-lg">
+      <div className="flex flex-col items-center justify-center w-full md:max-w-screen-lg">
         <span className="text-neutral-600 font-regular text-sm text-center">
           Security Measures
         </span>
@@ -41,7 +41,7 @@ export default function Measure() {
             <br />
             for Hacker to Crack LEXA&apos;s Data*
           </h1>
-          <p className="text-md font-light text-neutral-600 text-center leading-snug mt-8 lg:max-w-screen-md px-12">
+          <p className="text-md font-light text-neutral-600 text-center leading-snug mt-8 md:max-w-screen-md px-12">
             LEXA uses AES-256 Encryption Protocol, which used by the U.S.
             government, military, and most of the modern bank you know nowadays
             to protect sensitive information. It&apos;s the industry standard
@@ -65,7 +65,7 @@ export default function Measure() {
               </div>
             ))}
           </div>
-          <p className="flex justify-center mt-8 text-sm font-light text-neutral-600 lg:max-w-screen-md">
+          <p className="flex justify-center mt-8 text-sm font-light text-neutral-600 md:max-w-screen-md">
             For more information, please read our
             <Link
               href="/legal/security-policy"
@@ -75,7 +75,7 @@ export default function Measure() {
             </Link>
             .
           </p>
-          <p className="text-xs font-light text-neutral-500 text-center leading-snug mt-4 lg:max-w-screen-md px-12">
+          <p className="text-xs font-light text-neutral-500 text-center leading-snug mt-4 md:max-w-screen-md px-12">
             * Assuming the hacker can try 1 trillion encryption key per second,
             they&apos;ll need
             <br />

@@ -7,10 +7,10 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <>
-      <div className="z-10 flex items-center justify-center mt-[20vh]">
-        <div className="flex-col items-center justify-center w-full lg:max-w-screen-lg">
+      <div className="z-20 flex items-center justify-center mt-[17vh] md:mt-[20vh] px-8 md:px-0">
+        <div className="flex-col items-center justify-center w-full md:max-w-screen-lg">
           <HeroTitle />
-          <div className="flex items-center justify-center mt-10">
+          <div className="flex items-center justify-center mt-8 md:mt-10">
             <Link href="/beta" target="_blank" rel="noopener noreferrer">
               <Button id="hero-register-button" size="lg">
                 <TestTubeDiagonal />
@@ -20,7 +20,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="z-10 flex items-center justify-center mt-16">
+      <div className="z-10 flex items-center justify-center mt-12 md:mt-16">
         <HeroVideo />
       </div>
     </>

@@ -34,9 +34,9 @@ export default function HeroVideo({ children }) {
   });
 
   return (
-    <div className="flex items-center justify-center w-full lg:max-w-screen-lg">
-      <div className="relative max-w-1/2 w-full h-[70vh]">
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-lg">
+    <div className="flex items-center justify-center w-full md:max-w-screen-lg">
+      <div className="relative max-w-1/2 w-full h-screen md:h-[70vh]">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden md:rounded-lg">
           <Blurhash
             hash="L27w.^_3_3xu00ay9Fayj[?bWBt7"
             width="100%"
@@ -49,7 +49,7 @@ export default function HeroVideo({ children }) {
         </div>
         <video
           ref={video}
-          className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 rounded-lg"
+          className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 md:rounded-lg"
           autoPlay
           loop
           muted
@@ -59,7 +59,7 @@ export default function HeroVideo({ children }) {
           <source src="videos/product-hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute top-0 left-0 z-10 w-full h-full bg-black opacity-40 rounded-lg"></div>
+        <div className="absolute top-0 left-0 z-10 w-full h-full bg-black opacity-40 md:rounded-lg"></div>
         <div className="absolute top-0 left-0 z-20 flex items-center justify-center w-full h-full">
           {children}
         </div>

@@ -29,22 +29,22 @@ export default function UseCase() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center mt-24 mb-32">
-      <div className="flex flex-col items-center justify-center w-full lg:max-w-screen-lg">
+    <div className="flex flex-col items-center justify-center mt-20">
+      <div className="flex flex-col items-center justify-center w-full md:max-w-screen-lg">
         <span className="text-neutral-600 font-regular text-sm text-center">
           Use Cases
         </span>
         <div className="flex flex-col w-full mt-6">
-          <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-6xl font-medium leading-none text-transparent dark:from-white dark:to-slate-900/10">
+          <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-4xl md:text-6xl font-medium leading-snug text-transparent dark:from-white dark:to-slate-900/10 px-8 md:px-0">
             We turn Lawyer
             <br />
             into Super-Lawyer
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 mt-2 md:mt-8 px-2 md:px-0">
             {usecases.map((usecase, index) => (
               <div
                 key={index}
-                className={`text-left border-neutral-300 p-8 transition-colors duration-1000 hover:bg-neutral-100 ${index === 0 || index % 2 === 0 ? "md:border-r" : ""} ${index >= 2 ? "" : "md:border-b"}`}
+                className={`text-left border-neutral-300 p-6 md:p-8 transition-colors duration-1000 md:hover:bg-neutral-100 ${index === 0 || index % 2 === 0 ? "md:border-r" : ""} ${index >= 2 ? "" : "md:border-b"}`}
               >
                 <div className="flex flex-col items-start">
                   <usecase.icon className="mr-2 mb-4" strokeWidth={1.3} />

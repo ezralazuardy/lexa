@@ -13,7 +13,6 @@ import { useEffect, useState } from "react";
 
 export default function Feature() {
   const features = getFeatures();
-
   const [carouselApi, setCarouselApi] = useState(null);
   let carouselAutoplayThrottleTimer;
 
@@ -60,15 +59,15 @@ export default function Feature() {
   }, [carouselApi]);
 
   return (
-    <div className="z-10 flex items-center justify-center mt-24 py-14">
-      <div className="flex-col items-center justify-center w-full lg:max-w-screen-lg">
+    <div className="flex flex-col items-center justify-center mt-24 px-8 md:px-0 md:flex-row">
+      <div className="flex-col items-center justify-center w-full md:max-w-screen-lg">
         <span className="text-neutral-600 font-regular text-sm">
           Powerful Features
         </span>
-        <div className="flex columns-2 w-full mt-4">
+        <div className="flex flex-col md:flex-row w-full mt-4">
           <div className="flex-col w-full">
             <h1
-              className={`text-4xl font-medium text-[#171717] text-left leading-snug max-w-sm ${Open_Sans.className}`}
+              className={`text-3xl md:text-4xl font-medium text-[#171717] text-left leading-snug max-w-sm ${Open_Sans.className}`}
             >
               Efficient Tools for Modern Legal Work
             </h1>
@@ -95,10 +94,10 @@ export default function Feature() {
               ))}
             </ul>
           </div>
-          <div className="flex w-full justify-end items-end pt-4 max-w-lg">
+          <div className="flex w-full justify-center md:justify-end items-end pt-4 max-w-lg mt-6 md:mt-0">
             <Carousel
               orientation="vertical"
-              className="w-full ml-16 hover:cursor-pointer"
+              className="w-full md:ml-16 hover:cursor-pointer"
               setApi={setCarouselApi}
               opts={{
                 align: "start",
@@ -109,10 +108,10 @@ export default function Feature() {
                 }),
               ]}
             >
-              <CarouselContent className="h-[340px]">
+              <CarouselContent className="h-[30vh] md:h-[42vh]">
                 {features.map((feature, index) => (
-                  <CarouselItem key={index} className="h-[350px]">
-                    <div className="relative flex-col items-center justify-center w-full lg:max-w-screen-lg h-[300px] rounded-lg">
+                  <CarouselItem key={index} className="h-[30vh] md:h-[42vh]">
+                    <div className="relative flex-col items-center justify-center w-full md:max-w-screen-lg h-[28vh] md:h-[40vh] rounded-lg">
                       <Image
                         src={feature.image}
                         alt={feature.title}

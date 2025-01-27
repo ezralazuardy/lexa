@@ -4,11 +4,11 @@ import Open_Sans from "@/lib/fonts/open-sans";
 export default function ArticleHeader({ type, headline, date, writer }) {
   return (
     <div className="flex-col flex items-center justify-center w-full">
-      <span className="text-sm font-regular text-neutral-600 text-center leading-none uppercase lg:max-w-screen-lg">
+      <span className="text-sm font-regular text-neutral-600 text-center leading-none uppercase md:max-w-screen-lg">
         {type}
       </span>
       <h1
-        className={`text-7xl font-medium text-[#171717] text-center leading-none mt-8 lg:max-w-screen-lg ${Open_Sans.className}`}
+        className={`text-7xl font-medium text-[#171717] text-center leading-none mt-8 md:max-w-screen-lg ${Open_Sans.className}`}
       >
         {headline}
       </h1>

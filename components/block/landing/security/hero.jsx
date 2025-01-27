@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <div className="flex items-center justify-center mt-[20vh]">
       <HeroVideo>
-        <div className="z-20 flex-col items-center justify-center w-full lg:max-w-screen-lg pb-4">
+        <div className="z-20 flex-col items-center justify-center w-full md:max-w-screen-lg pb-4">
           <div className="flex items-center justify-center">
             <Badge className="text-white font-light" variant="outline">
               Security

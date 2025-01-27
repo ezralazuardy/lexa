@@ -40,9 +40,9 @@ export default function HeroVideo() {
   });
 
   return (
-    <div className="flex items-center justify-center w-full lg:max-w-screen-lg">
-      <div className="relative max-w-1/2 w-full h-[40vh]">
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-lg">
+    <div className="flex items-center justify-center w-full md:max-w-screen-lg">
+      <div className="relative max-w-1/2 w-full h-[23vh] md:h-[40vh]">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden md:rounded-lg">
           <Blurhash
             hash="UBKn;[-p4oogxuE2E1oe0L~VxtR*-:?aRkIp"
             width="100%"
@@ -55,7 +55,7 @@ export default function HeroVideo() {
         </div>
         <video
           ref={video}
-          className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 rounded-lg"
+          className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 md:rounded-lg"
           autoPlay
           loop
           muted
@@ -67,7 +67,7 @@ export default function HeroVideo() {
         </video>
         <div
           ref={prompt}
-          className="transition-opacity duration-1000 opacity-0"
+          className="flex items-center justify-center absolute inset-0 transition-opacity duration-1000 opacity-0 px-8"
         >
           <HeroPrompt />
         </div>

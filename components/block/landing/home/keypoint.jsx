@@ -7,7 +7,7 @@ export default function Keypoint() {
   const keypoints = [
     {
       icon: BookOpen,
-      title: "Human-Readable",
+      title: "Readable",
       description:
         "Transform complex legal documents into clear, actionable insights you can trust.",
     },
@@ -44,32 +44,33 @@ export default function Keypoint() {
   ];
 
   return (
-    <div className="z-10 flex items-center justify-center mt-24 py-14">
-      <div className="flex-col items-center justify-center w-full lg:max-w-screen-lg">
-        <h1
-          className={`text-3xl font-regular text-[#171717] text-center leading-none ${Open_Sans.className}`}
-        >
+    <div className="flex items-center justify-center mt-20 md:mt-24">
+      <div className="flex-col items-center justify-center w-full md:max-w-screen-lg">
+        <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-4xl md:text-6xl font-medium leading-snug text-transparent dark:from-white dark:to-slate-900/10 px-8 md:px-0">
           The Future of Legal Research
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 mt-12">
+        <div className="grid grid-cols-3 md:grid-cols-3 mt-4 md:mt-8 px-6 md:px-0">
           {keypoints.map((keypoint, index) => (
             <div
               key={index}
-              className={`text-left border-neutral-300 p-8 transition-colors duration-1000 hover:bg-neutral-100 ${index % 3 !== 2 ? "md:border-r" : ""} ${index >= 3 ? "" : "md:border-b"}`}
+              className={`border-neutral-300 py-6 md:px-8 md:py-8 transition-colors duration-1000 md:hover:bg-neutral-100 ${index % 3 !== 2 ? "md:border-r" : ""} ${index >= 6 ? "hidden md:block" : "md:border-b"}`}
             >
-              <div className="flex flex-col items-start">
-                <keypoint.icon className="mr-2 mb-4" strokeWidth={1.3} />
-                <h2 className="text-lg font-light leading-none">
+              <div className="flex flex-col items-center md:items-start">
+                <keypoint.icon
+                  className="mr-0 md:mr-2 mb-4"
+                  strokeWidth={1.3}
+                />
+                <h2 className="text-xs md:text-lg font-light leading-none">
                   {keypoint.title}
                 </h2>
               </div>
-              <p className="text-xs font-light text-gray-600 leading-snug mt-3 text-justify">
+              <p className="hidden md:block text-xs font-light text-gray-600 leading-snug mt-3 text-center md:text-justify">
                 {keypoint.description}
               </p>
             </div>
           ))}
         </div>
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-6 md:mt-10">
           <Button variant="outline" size="lg" asChild>
             <Link href="/product">Learn More</Link>
           </Button>

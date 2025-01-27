@@ -5,64 +5,50 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Customer() {
+  const customers = [
+    {
+      link: "https://lazuardy.tech",
+      src: customer1,
+      alt: "Customer 1",
+      height: 150,
+      width: 500,
+    },
+    {
+      link: "https://maps.app.goo.gl/jRvPprWppSS5EgJS7",
+      src: customer2,
+      alt: "Customer 2",
+      height: 150,
+      width: 500,
+      imageClass: "mb-0.5 mx-8 md:mx-20",
+    },
+    {
+      link: "https://lokari.id/kantor-advokat-pengacara-anwar-effendi-sh-mh-rekan-semarang_kXxLWq6E7r",
+      src: customer3,
+      alt: "Customer 3",
+      height: 150,
+      width: 500,
+    },
+  ];
+
   return (
-    <div className="flex items-center justify-center mt-6">
-      <div className="flex items-center justify-center w-full lg:max-w-screen-lg">
+    <div className="flex items-center justify-center w-full mt-6 px-8">
+      {customers.map((customer, index) => (
         <Link
-          href="https://lazuardy.tech"
+          key={index}
+          href={customer.link}
+          className="flex items-center justify-center w-auto"
           target="_blank"
           rel="noopener noreferrer"
-          className="max-w-24 mr-20 select-none"
-          style={{ userSelect: "none" }}
         >
           <Image
-            alt="Customer 1"
-            src={customer1}
+            alt={customer.alt}
+            src={customer.src}
+            className={`select-none object-cover w-auto h-full max-h-10 md:max-h-16 ${customer.imageClass}`}
             placeholder="blur"
-            height={100}
-            width={400}
-            className="select-none"
-            style={{ userSelect: "none" }}
             draggable="false"
           />
         </Link>
-        <Link
-          href="https://maps.app.goo.gl/jRvPprWppSS5EgJS7"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="max-w-28 mr-16 select-none"
-          style={{ userSelect: "none" }}
-        >
-          <Image
-            alt="Customer 2"
-            src={customer2}
-            placeholder="blur"
-            height={100}
-            width={400}
-            className="select-none"
-            style={{ userSelect: "none" }}
-            draggable="false"
-          />
-        </Link>
-        <Link
-          href="https://lokari.id/kantor-advokat-pengacara-anwar-effendi-sh-mh-rekan-semarang_kXxLWq6E7r"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="max-w-56 pt-4 select-none"
-          style={{ userSelect: "none" }}
-        >
-          <Image
-            alt="Customer 3"
-            src={customer3}
-            placeholder="blur"
-            height={100}
-            width={400}
-            className="select-none"
-            style={{ userSelect: "none" }}
-            draggable="false"
-          />
-        </Link>
-      </div>
+      ))}
     </div>
   );
 }

@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Articles({ news }) {
   return (
     <div className="flex items-center justify-center mt-14 mb-20">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full lg:max-w-screen-lg">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full md:max-w-screen-lg">
         {news.map((data) => (
           <Item key={data.uuid} data={data} />
         ))}

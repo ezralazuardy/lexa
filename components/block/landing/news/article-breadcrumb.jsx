@@ -21,7 +21,7 @@ export default function ArticleBreadcrumb({ path }) {
 
   return (
     <div className="flex-col flex items-center justify-center w-full">
-      <div className="lg:max-w-screen-lg">
+      <div className="md:max-w-screen-lg">
         <Breadcrumb>
           <BreadcrumbList>
             {pathArray.map((segment, index) => (

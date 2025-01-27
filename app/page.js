@@ -18,7 +18,7 @@ export default function Home() {
       <Feature />
       <Security />
       <FAQ />
-      <CTA />
+      <CTA className="mt-24" />
       <Footer />
     </div>
   );

@@ -13,7 +13,7 @@ export default function Articles({ legals, latestUpdateDate }) {
   return (
     <div className="flex flex-col items-center justify-center relative mt-10 pt-20">
       <DotPattern className={cn("z-0 absolute inset-0 fill-neutral-400")} />
-      <div className="z-10 grid grid-cols-1 md:grid-cols-4 gap-16 w-full lg:max-w-screen-lg min-h-screen">
+      <div className="z-10 grid grid-cols-1 md:grid-cols-4 gap-16 w-full md:max-w-screen-lg min-h-screen">
         {legals.map((data) => (
           <Item key={data.uuid} data={data} />
         ))}

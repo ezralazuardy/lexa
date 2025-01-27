@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function Standard() {
   return (
     <div className="flex flex-col items-center justify-center mt-24 mb-32">
-      <div className="flex flex-col items-center justify-center w-full lg:max-w-screen-lg">
+      <div className="flex flex-col items-center justify-center w-full md:max-w-screen-lg">
         <span className="text-neutral-600 font-regular text-sm text-center">
           Standards
         </span>
@@ -18,7 +18,7 @@ export default function Standard() {
           <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-5xl font-medium leading-none text-transparent dark:from-white dark:to-slate-900/10">
             Industry Standard for Data Privacy
           </h1>
-          <p className="text-md font-light text-neutral-600 text-center leading-snug mt-8 lg:max-w-screen-md px-12">
+          <p className="text-md font-light text-neutral-600 text-center leading-snug mt-8 md:max-w-screen-md px-12">
             LEXA is certified and compliant with
           </p>
         </div>
@@ -61,12 +61,12 @@ export default function Standard() {
             </Link>
           </div>
         </div>
-        <p className="text-md font-light text-neutral-600 text-center leading-snug mt-8 lg:max-w-screen-md px-12">
+        <p className="text-md font-light text-neutral-600 text-center leading-snug mt-8 md:max-w-screen-md px-12">
           As our commitment to data privacy, other standards, compliance,
           <br />
           and certifications will be added in the future.
         </p>
-        <p className="flex justify-center mt-8 text-sm font-light text-neutral-600 lg:max-w-screen-md">
+        <p className="flex justify-center mt-8 text-sm font-light text-neutral-600 md:max-w-screen-md">
           For more information, please read our
           <Link
             href="/legal/privacy-policy"

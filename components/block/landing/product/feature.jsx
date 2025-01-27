@@ -13,7 +13,7 @@ export default function Feature() {
   const features = getFeatures();
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center px-8 md:px-0">
       {features.map((feature, index) => (
         <FeatureItem key={index} feature={feature} inverted={index % 2 !== 0} />
       ))}
@@ -23,24 +23,27 @@ export default function Feature() {
 
 export function FeatureItem({ feature, inverted = false }) {
   return (
-    <div className="flex-col items-center justify-center w-full lg:max-w-screen-lg mt-24">
+    <div className="flex flex-col items-center justify-center w-full md:max-w-screen-lg mt-12 md:mt-24">
       <div
-        className={`flex columns-2 w-full ${inverted ? "flex-row-reverse" : ""}`}
+        className={`flex flex-col md:flex-row w-full ${inverted ? "md:flex-row-reverse" : ""}`}
       >
         <div className="flex flex-col w-full">
           <div className="flex">
-            <feature.icon className="w-7 h-7 mr-3 mt-1" strokeWidth={1.5} />
+            <feature.icon
+              className="w-5 h-5 md:w-7 md:h-7 mr-2 md:mr-3 mt-1"
+              strokeWidth={1.4}
+            />
             <h1
-              className={`text-2xl font-medium text-[#171717] text-left leading-snug max-w-sm ${Open_Sans.className}`}
+              className={`text-xl md:text-2xl font-medium text-[#171717] text-left leading-snug max-w-sm ${Open_Sans.className}`}
             >
               {feature.title}
             </h1>
           </div>
           <p
-            className="mt-6 text-sm font-light text-neutral-600 text-justify"
+            className="mt-4 md:mt-6 text-xs font-light text-neutral-600 text-justify"
             dangerouslySetInnerHTML={{ __html: feature.long_description }}
           ></p>
-          <div className="mt-10 flex justify-start">
+          <div className="mt-6 md:mt-10 mb-6 md:mb-0 flex justify-start">
             <ReadUseCaseButton feature={feature} />
           </div>
         </div>
@@ -49,14 +52,14 @@ export function FeatureItem({ feature, inverted = false }) {
         >
           <Carousel
             orientation="vertical"
-            className={`w-full ${inverted ? "mr-16" : "ml-16"} hover:cursor-pointer`}
+            className={`w-full ${inverted ? "md:mr-16" : "md:ml-16"} hover:cursor-pointer`}
             opts={{
               align: "start",
             }}
           >
-            <CarouselContent className="h-[340px]">
-              <CarouselItem key={0} className="h-[350px]">
-                <div className="relative flex-col items-center justify-center w-full lg:max-w-screen-lg h-[300px] rounded-lg">
+            <CarouselContent className="h-[30vh] md:h-[42vh]">
+              <CarouselItem key={0} className="h-[30vh] md:h-[42vh]">
+                <div className="relative flex-col items-center justify-center w-full md:max-w-screen-lg rounded-lg h-[28vh] md:h-[40vh]">
                   <Image
                     src={feature.image}
                     alt={feature.title}
@@ -77,11 +80,11 @@ export function FeatureItem({ feature, inverted = false }) {
 export function ReadUseCaseButton() {
   return (
     <div className="flex items-center">
-      <Button variant="outline" size="default" disabled>
+      <Button variant="outline" size="sm" disabled>
         <Link href="#">Read Use Cases</Link>
       </Button>
       <span className="ml-4 text-xs font-light text-neutral-600">
-        use case documentation is coming soon.
+        documentation is coming soon.
       </span>
     </div>
   );

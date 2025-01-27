@@ -16,7 +16,7 @@ export default function Product() {
       <Feature />
       <UseCase />
       <Jurisdiction />
-      <CTA />
+      <CTA className="mt-28" />
       <Footer />
     </div>
   );

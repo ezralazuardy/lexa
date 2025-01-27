@@ -15,8 +15,8 @@ export default function HeroPrompt() {
   ];
 
   return (
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-5 py-3 w-full max-w-lg rounded-lg shadow-lg flex items-center">
-      <span className="text-md font-regular text-neutral-600 text-left leading-none flex-grow">
+    <div className="z-20 flex items-center bg-white px-5 py-3 w-full max-w-lg rounded-lg shadow-lg">
+      <span className="text-sm font-regular text-neutral-600 text-left leading-snug flex-grow truncate">
         <TypeAnimation
           sequence={getTypingAnimationSequence(words)}
           speed={60}

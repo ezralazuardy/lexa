@@ -51,26 +51,26 @@ export default function Header() {
 
   return (
     <div id="header" className="fixed top-0 left-0 right-0 flex-col z-50">
-      <div className="flex bg-white justify-between items-center w-full px-8 lg:px-0">
-        <div className="flex justify-between items-center w-full lg:max-w-screen-lg py-4 mx-auto">
-          <div className="mt-4 lg:mt-8">
+      <div className="flex bg-white/80 backdrop-blur md:bg-white justify-between items-center w-full px-8 md:px-0 border-b border-neutral-400 md:border-none shadow-lg md:shadow-none">
+        <div className="flex justify-between items-center w-full md:max-w-screen-lg pt-4 pb-6 mx-auto">
+          <div className="pt-4 md:pt-8">
             <Link href="/">
-              <Logo className="text-3xl lg:text-2xl" />
+              <Logo className="text-2xl" />
             </Link>
           </div>
-          <div className="mt-2 lg:hidden">
+          <div className="pt-2 md:hidden">
             <MenuSheet pathname={pathname} links={links} />
           </div>
-          <div className="relative hidden lg:flex text-sm font-regular text-neutral-600">
+          <div className="relative hidden md:flex text-sm font-regular text-neutral-600">
             <div
               className={`z-10 transition-all ease-out ${showRegister ? "transform -translate-x-28" : "transform translate-x-0"}`}
             >
-              <div className="flex flex-col lg:flex-row gap-7">
+              <div className="flex flex-col md:flex-row gap-7">
                 {links.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`transition-colors duration-500 hover:text-black mt-8 lg:mt-0 ${pathname === link.href ? "text-black font-semibold" : ""}`}
+                    className={`transition-colors duration-500 hover:text-black mt-8 md:mt-0 ${pathname === link.href ? "text-black font-semibold" : ""}`}
                   >
                     {link.label}
                   </Link>
@@ -82,14 +82,14 @@ export default function Header() {
               href="/beta"
               target="_blank"
               rel="noopener noreferrer"
-              className="absolute lg:relative z-0 top-0 right-0 mt-7 lg:mt-0 transition-all ease-out opacity-0 lg:opacity-100"
+              className="absolute md:relative z-0 top-0 right-0 mt-7 md:mt-0 transition-all ease-out opacity-0 md:opacity-100"
             >
               <Button size="sm">REGISTER</Button>
             </Link>
           </div>
         </div>
       </div>
-      <div className="flex bg-gradient-to-b from-white to-transparent w-full pt-4 h-[8vh]"></div>
+      <div className="hidden md:flex bg-gradient-to-b from-white to-transparent w-full pt-4 h-[8vh]"></div>
     </div>
   );
 }
