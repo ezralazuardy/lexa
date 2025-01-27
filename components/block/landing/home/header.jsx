@@ -1,5 +1,6 @@
 "use client";
 
+import MenuSheet from "@/components/block/landing/home/menu-sheet";
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/ui/logo";
 import Link from "next/link";
@@ -10,6 +11,13 @@ export default function Header() {
   const [showRegister, setShowRegister] = useState(false);
   const registerButton = useRef(null);
   const pathname = usePathname();
+
+  const links = [
+    { href: "/product", label: "Product" },
+    { href: "/security", label: "Security" },
+    { href: "/news", label: "News" },
+    { href: "/sales", label: "Contact Sales" },
+  ];
 
   useEffect(() => {
     const r = registerButton?.current;
@@ -43,42 +51,30 @@ export default function Header() {
 
   return (
     <div id="header" className="fixed top-0 left-0 right-0 flex-col z-50">
-      <div className="flex bg-white justify-between items-center w-full">
+      <div className="flex bg-white justify-between items-center w-full px-8 lg:px-0">
         <div className="flex justify-between items-center w-full lg:max-w-screen-lg py-4 mx-auto">
-          <div className="mt-8">
+          <div className="mt-4 lg:mt-8">
             <Link href="/">
-              <Logo className="text-2xl" />
+              <Logo className="text-3xl lg:text-2xl" />
             </Link>
           </div>
-          <div className="relative flex text-sm font-regular text-neutral-600">
+          <div className="mt-2 lg:hidden">
+            <MenuSheet pathname={pathname} links={links} />
+          </div>
+          <div className="relative hidden lg:flex text-sm font-regular text-neutral-600">
             <div
               className={`z-10 transition-all ease-out ${showRegister ? "transform -translate-x-28" : "transform translate-x-0"}`}
             >
-              <div className="flex gap-7">
-                <Link
-                  href="/product"
-                  className={`transition-colors duration-500 hover:text-black mt-8 ${pathname === "/product" ? "text-black font-semibold" : ""}`}
-                >
-                  Product
-                </Link>
-                <Link
-                  href="/security"
-                  className={`transition-colors duration-500 hover:text-black mt-8 ${pathname === "/security" ? "text-black font-semibold" : ""}`}
-                >
-                  Security
-                </Link>
-                <Link
-                  href="/news"
-                  className={`transition-colors duration-500 hover:text-black mt-8 ${pathname === "/news" ? "text-black font-semibold" : ""}`}
-                >
-                  News
-                </Link>
-                <Link
-                  href="/sales"
-                  className={`transition-colors duration-500 hover:text-black mt-8 ${pathname === "/sales" ? "text-black font-semibold" : ""}`}
-                >
-                  Contact Sales
-                </Link>
+              <div className="flex flex-col lg:flex-row gap-7">
+                {links.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`transition-colors duration-500 hover:text-black mt-8 lg:mt-0 ${pathname === link.href ? "text-black font-semibold" : ""}`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
               </div>
             </div>
             <Link
@@ -86,7 +82,7 @@ export default function Header() {
               href="/beta"
               target="_blank"
               rel="noopener noreferrer"
-              className="absolute z-0 top-0 right-0 mt-7 transition-all ease-out opacity-0"
+              className="absolute lg:relative z-0 top-0 right-0 mt-7 lg:mt-0 transition-all ease-out opacity-0 lg:opacity-100"
             >
               <Button size="sm">REGISTER</Button>
             </Link>

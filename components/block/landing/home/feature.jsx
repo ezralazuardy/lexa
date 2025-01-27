@@ -117,8 +117,7 @@ export default function Feature() {
                         src={feature.image}
                         alt={feature.title}
                         placeholder="blur"
-                        layout="fill"
-                        className="fixed z-10 select-none object-cover w-full h-auto rounded-lg"
+                        className="absolute z-10 select-none object-cover w-full h-full rounded-lg"
                         draggable="false"
                       />
                     </div>

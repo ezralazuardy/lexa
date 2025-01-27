@@ -14,8 +14,7 @@ export default function CTA() {
           alt="CTA"
           src={cta}
           placeholder="blur"
-          layout="fill"
-          className="fixed z-10 select-none object-cover w-full h-auto rounded-lg opacity-60"
+          className="absolute z-10 select-none object-cover w-full h-full rounded-lg opacity-60"
           draggable="false"
         />
         <div className="absolute z-20 inset-0 flex items-center justify-center">

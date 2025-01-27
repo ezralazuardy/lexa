@@ -17,7 +17,7 @@ export default function Form() {
   });
 
   return (
-    <div className="flex items-center justify-center mt-12">
+    <div className="flex items-center justify-center mt-10 md:mt-12 px-8 lg:px-0">
       <div className="flex-col items-center justify-center w-full lg:max-w-screen-md">
         <hr className="border-neutral-300 w-full mb-4" />
         <div className="relative w-full min-h-[70vh]">

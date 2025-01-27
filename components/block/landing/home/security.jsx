@@ -37,8 +37,7 @@ export default function Security() {
                         alt={security.imageAlt}
                         draggable="false"
                         placeholder="blur"
-                        layout="fill"
-                        className="fixed z-10 select-none object-cover w-full h-auto rounded-lg"
+                        className="absolute z-10 select-none object-cover w-full h-full rounded-lg"
                       />
                     </div>
                   </CarouselItem>
