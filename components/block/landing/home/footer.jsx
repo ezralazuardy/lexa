@@ -1,6 +1,7 @@
 "use client";
 
 import Logo from "@/components/ui/logo";
+import StatusPageWidget from "@/components/ui/status-page-widget";
 import { socials } from "@/lib/state";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -91,7 +92,9 @@ export default function Footer() {
             © Lazuardy 2025. All rights reserved.
           </Link>
         </div>
-        <div className="flex gap-7 text-sm font-light text-neutral-600 mt-1 md:mt-0"></div>
+        <div className="flex gap-7 text-sm font-light text-neutral-600 mt-1 md:mt-0">
+          <StatusPageWidget />
+        </div>
         <div className="flex gap-7 text-sm font-light text-neutral-600 mt-1 md:mt-0">
           SIM Square, Semarang, ID 50134
         </div>
