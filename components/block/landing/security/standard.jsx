@@ -36,8 +36,6 @@ export default function Standard() {
                 alt="GDPR"
                 draggable="false"
                 placeholder="blur"
-                width={385}
-                height={500}
                 className="w-auto h-[120px] md:h-[150px] select-none"
               />
             </Link>
@@ -52,8 +50,6 @@ export default function Standard() {
                 alt="CCPA"
                 draggable="false"
                 placeholder="blur"
-                width={385}
-                height={500}
                 className="w-auto h-[120px] md:h-[150px] select-none"
               />
             </Link>

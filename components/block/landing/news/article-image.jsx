@@ -9,8 +9,6 @@ export default function ArticleImage({ uuid, blurhash }) {
         src={`/images/news/${uuid}.png`}
         draggable="false"
         rounded="false"
-        width={1024}
-        height={576}
       />
     </div>
   );

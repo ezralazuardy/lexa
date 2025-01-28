@@ -4,7 +4,13 @@ import Image from "next/image";
 import { useState } from "react";
 import { Blurhash } from "react-blurhash";
 
-export default function BlurHashImage({ blurhash, rounded = false, ...props }) {
+export default function BlurHashImage({
+  blurhash,
+  rounded = false,
+  width = 600,
+  height = 340,
+  ...props
+}) {
   if (typeof rounded === "string") rounded = rounded === "true";
 
   const [isLoaded, setIsLoaded] = useState(false);
@@ -27,8 +33,8 @@ export default function BlurHashImage({ blurhash, rounded = false, ...props }) {
       >
         <Image
           onLoadingComplete={() => setIsLoaded(true)}
-          width={500}
-          height={280}
+          width={width}
+          height={height}
           className={`absolute top-0 left-0 select-none object-cover w-full h-auto aspect-video ${rounded ? "md:rounded-lg" : ""}`}
           draggable="false"
           {...props}

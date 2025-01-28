@@ -76,8 +76,6 @@ export default function Security() {
                 alt="GDPR"
                 draggable="false"
                 placeholder="blur"
-                width={385}
-                height={500}
                 className="w-auto h-[75px] select-none -ml-1"
               />
               <Image
@@ -85,8 +83,6 @@ export default function Security() {
                 alt="CCPA"
                 draggable="false"
                 placeholder="blur"
-                width={385}
-                height={500}
                 className="w-auto h-[75px] select-none -ml-1"
               />
             </div>
