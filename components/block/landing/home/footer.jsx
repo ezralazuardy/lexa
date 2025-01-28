@@ -92,11 +92,14 @@ export default function Footer() {
             © Lazuardy 2025. All rights reserved.
           </Link>
         </div>
-        <div className="flex gap-7 text-sm font-light text-neutral-600 mt-1 md:mt-0">
+        <div className="hidden md:flex gap-7 text-sm font-light text-neutral-600 mt-1 md:mt-0">
           <StatusPageWidget />
         </div>
-        <div className="flex gap-7 text-sm font-light text-neutral-600 mt-1 md:mt-0">
+        <div className="flex gap-7 text-sm font-light text-neutral-600 mt-2 md:mt-0">
           SIM Square, Semarang, ID 50134
+        </div>
+        <div className="flex md:hidden gap-7 text-sm font-light text-neutral-600 mt-1 md:mt-0">
+          <StatusPageWidget />
         </div>
       </div>
     </footer>
