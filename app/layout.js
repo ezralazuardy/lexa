@@ -60,7 +60,7 @@ export const viewport = {
   themeColor: [{ color: "#171717" }],
 };
 
-const Crisp = dynamic(() => import("@/components/crisp"), { ssr: false });
+const Crisp = dynamic(() => import("@/components/crisp"));
 
 export default function RootLayout({ children }) {
   return (
