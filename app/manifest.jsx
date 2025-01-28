@@ -6,8 +6,8 @@ export default function manifest() {
       "Empowering Legal Professional throug Cutting-edge AI Solutions.",
     start_url: "/",
     display: "standalone",
-    background_color: "#000000",
-    theme_color: "#000000",
+    background_color: "#171717",
+    theme_color: "#171717",
     icons: [
       {
         src: "/web-app-manifest-192x192.png",

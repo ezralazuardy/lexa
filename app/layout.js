@@ -57,15 +57,19 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: [{ color: "#000000" }],
+  themeColor: [{ color: "#171717" }],
 };
 
-const Crisp = dynamic(() => import("@/components/crisp"));
+const Crisp = dynamic(() => import("@/components/crisp"), { ssr: false });
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID} />
+      {process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID && (
+        <GoogleTagManager
+          gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID}
+        />
+      )}
       <body className={`${Inter.className}`}>
         <ThemeProvider
           attribute="class"
