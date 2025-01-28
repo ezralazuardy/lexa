@@ -29,7 +29,7 @@ export default function Tagline() {
 
   return (
     <div className="flex flex-col items-center justify-center mt-16 md:mt-24 px-8 md:px-0">
-      <div className="flex flex-col w-full md:max-w-screen-lg text-3xl md:text-5xl">
+      <div className="flex flex-col w-full md:max-w-screen-lg text-xl md:text-4xl lg:text-5xl">
         <span className="text-neutral-600 font-regular text-sm text-start">
           Features
         </span>
@@ -39,7 +39,7 @@ export default function Tagline() {
           Simple legal platform that makes
         </h1>
         <h1
-          className={`font-regular text-[#171717] text-left leading-snug my-0 md:my-2 ${Open_Sans.className}`}
+          className={`font-regular text-[#171717] text-left leading-snug my-2 md:my-2 ${Open_Sans.className}`}
         >
           <TypeAnimation
             sequence={getTypingAnimationSequence(words)}

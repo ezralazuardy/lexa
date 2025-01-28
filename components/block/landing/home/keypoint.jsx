@@ -48,7 +48,7 @@ export default function Keypoint() {
         <h1 className="w-full md:max-w-4xl pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-4xl md:text-5xl font-medium leading-snug md:leading-normal text-transparent dark:from-white dark:to-slate-900/10 px-8 md:px-0">
           The Future of Legal Research
         </h1>
-        <div className="grid grid-cols-3 mt-10 md:mt-8 gap-16 md:gap-0">
+        <div className="grid grid-cols-3 mt-10 md:mt-8 gap-12 md:gap-0">
           {keypoints.map((keypoint, index) => (
             <div
               key={index}

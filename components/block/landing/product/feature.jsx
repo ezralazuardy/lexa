@@ -13,7 +13,7 @@ export default function Feature() {
   const features = getFeatures();
 
   return (
-    <div className="flex flex-col items-center justify-center mt-12 px-8 md:px-0">
+    <div className="flex flex-col items-center justify-center md:mt-12 px-8 md:px-0">
       {features.map((feature, index) => (
         <FeatureItem
           key={index}

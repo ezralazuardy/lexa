@@ -12,7 +12,7 @@ import Link from "next/link";
 
 export default function MenuSheet({ pathname, links }) {
   return (
-    <Sheet>
+    <Sheet className="z-50">
       <SheetTrigger asChild>
         <Button variant="default" size="sm">
           <Menu size={26} strokeWidth={1.2} />
@@ -31,7 +31,7 @@ export default function MenuSheet({ pathname, links }) {
         <div className="flex flex-col gap-10 mt-14 pr-1 text-center">
           <Link
             href="/"
-            className={`text-lg font-regular text-neutral-600 transition-colors duration-500 hover:text-black leading-none ${pathname === "/" ? "text-black font-semibold" : ""}`}
+            className={`text-md font-regular text-neutral-600 transition-colors duration-500 hover:text-black leading-none ${pathname === "/" ? "text-black font-semibold" : ""}`}
           >
             Home
           </Link>
@@ -39,7 +39,7 @@ export default function MenuSheet({ pathname, links }) {
             <Link
               key={index}
               href={link.href}
-              className={`text-lg font-regular text-neutral-600 transition-colors duration-500 hover:text-black leading-none ${pathname === link.href ? "text-black font-semibold" : ""}`}
+              className={`text-md font-regular text-neutral-600 transition-colors duration-500 hover:text-black leading-none ${pathname === link.href ? "text-black font-semibold" : ""}`}
             >
               {link.label}
             </Link>

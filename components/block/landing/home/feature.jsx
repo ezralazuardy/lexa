@@ -62,12 +62,9 @@ export default function Feature() {
     <div className="flex flex-col items-center justify-center mt-20 md:mt-32 px-8 md:px-0 md:flex-row">
       <div className="flex-col items-center justify-center w-full md:max-w-screen-lg">
         <div className="flex flex-row w-full">
-          <div className="w-1/2">
-            <span className="text-neutral-600 font-regular text-sm">
-              Powerful Features
-            </span>
-          </div>
-          <div className="w-1/2 hidden md:block"></div>
+          <span className="text-neutral-600 font-regular text-sm">
+            Powerful Features
+          </span>
         </div>
         <div className="flex flex-col md:flex-row w-full mt-6">
           <div className="flex-col w-full">
@@ -101,8 +98,8 @@ export default function Feature() {
           </div>
           <div className="flex w-full justify-center md:justify-end items-start max-w-lg pt-4 md:pt-0 mt-6 md:mt-0">
             <Carousel
-              orientation="vertical"
-              className="w-full md:ml-16 hover:cursor-pointer"
+              orientation="horizontal"
+              className="w-full md:ml-12 hover:cursor-pointer"
               opts={{
                 align: "start",
               }}
@@ -116,7 +113,7 @@ export default function Feature() {
               <CarouselContent className="w-full max-h-[310px] md:max-h-[280px]">
                 {features.map((feature, index) => (
                   <CarouselItem key={index} className="w-full h-auto">
-                    <div className="relative flex-col items-center justify-center w-full rounded-lg aspect-video">
+                    <div className="md:ml-3 relative flex-col items-center justify-center w-full rounded-lg aspect-video">
                       <Image
                         alt={feature.title}
                         src={feature.image}

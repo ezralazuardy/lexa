@@ -11,7 +11,7 @@ export default function BlurHashImage({ blurhash, rounded = false, ...props }) {
 
   return (
     <div
-      className={`relative w-full h-auto aspect-video overflow-hidden ${rounded ? "rounded-lg" : ""}`}
+      className={`relative w-full h-auto aspect-video overflow-hidden ${rounded ? "md:rounded-lg" : ""}`}
     >
       <Blurhash
         hash={blurhash}
@@ -20,16 +20,16 @@ export default function BlurHashImage({ blurhash, rounded = false, ...props }) {
         resolutionX={32}
         resolutionY={32}
         punch={1}
-        className={`absolute top-0 left-0 z-10 w-full h-auto aspect-video ${rounded ? "rounded-lg" : ""}`}
+        className={`absolute top-0 left-0 z-10 w-full h-auto aspect-video ${rounded ? "md:rounded-lg" : ""}`}
       />
       <div
-        className={`absolute top-0 left-0 z-20 w-full h-auto aspect-video transition-opacity duration-1000 ${isLoaded ? "opacity-100 delay-1000" : "opacity-0"} ${rounded ? "rounded-lg" : ""}`}
+        className={`absolute top-0 left-0 z-20 w-full h-auto aspect-video transition-opacity duration-1000 ${isLoaded ? "opacity-100 delay-1000" : "opacity-0"} ${rounded ? "md:rounded-lg" : ""}`}
       >
         <Image
           onLoadingComplete={() => setIsLoaded(true)}
           width={500}
           height={280}
-          className={`absolute top-0 left-0 select-none object-cover w-full h-auto aspect-video ${rounded ? "rounded-lg" : ""}`}
+          className={`absolute top-0 left-0 select-none object-cover w-full h-auto aspect-video ${rounded ? "md:rounded-lg" : ""}`}
           draggable="false"
           {...props}
         />

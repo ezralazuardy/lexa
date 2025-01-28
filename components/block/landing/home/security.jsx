@@ -33,8 +33,8 @@ export default function Security() {
         <div className="flex flex-col md:flex-row w-full mt-6">
           <div className="hidden md:flex w-full justify-center md:justify-end items-start max-w-lg pt-4 md:pt-0 mt-6 md:mt-0">
             <Carousel
-              orientation="vertical"
-              className="w-full md:mr-16 hover:cursor-pointer"
+              orientation="horizontal"
+              className="w-full md:mr-12 hover:cursor-pointer"
               opts={{
                 align: "start",
               }}
@@ -78,7 +78,7 @@ export default function Security() {
                 placeholder="blur"
                 width={385}
                 height={500}
-                className="w-auto h-[76px] select-none -ml-1"
+                className="w-auto h-[75px] select-none -ml-1"
               />
               <Image
                 src={ccpaBadge}
@@ -87,7 +87,7 @@ export default function Security() {
                 placeholder="blur"
                 width={385}
                 height={500}
-                className="w-auto h-[76px] select-none -ml-1"
+                className="w-auto h-[75px] select-none -ml-1"
               />
             </div>
           </div>

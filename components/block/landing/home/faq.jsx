@@ -41,12 +41,9 @@ export default function FAQ() {
     <div className="flex items-center justify-center mt-20 md:mt-32 px-8 md:px-0">
       <div className="flex flex-col items-start justify-center w-full md:max-w-screen-lg">
         <div className="flex flex-row w-full">
-          <div className="w-1/2">
-            <span className="text-neutral-600 font-regular text-sm">
-              Frequently Asked Question
-            </span>
-          </div>
-          <div className="w-1/2 hidden md:block"></div>
+          <span className="text-neutral-600 font-regular text-sm">
+            Frequently Asked Question
+          </span>
         </div>
         <div className="flex flex-col md:flex-row w-full mt-6">
           <div className="flex flex-col w-full md:w-1/2">
