@@ -24,10 +24,10 @@ export default function HeroTitle() {
         <WordRotate
           words={words}
           duration="4000"
-          className="-mt-2 pt-0.5 min-h-[13vh] md:min-h-max"
+          className="-mt-2 pt-0.5 md:mt-2 md:pt-0 min-h-[13vh] md:min-h-max"
         />
       </h1>
-      <p className="text-sm md:text-md md:text-lg font-light text-neutral-600 text-center leading-snug mt-2 md:mt-8">
+      <p className="text-sm md:text-lg font-light text-neutral-600 text-center leading-snug mt-2 md:mt-8">
         Streamline your Legal Workflows with Advanced AI-Powered Solutions.
       </p>
     </div>

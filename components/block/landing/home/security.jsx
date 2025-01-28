@@ -15,24 +15,54 @@ export default function Security() {
   const securities = [
     {
       image: security1,
-      imageAlt: "Security 1",
+      title: "Security 1",
     },
   ];
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center mt-20 px-8 md:px-0">
-      <div className="flex flex-col md:flex-row w-full items-center justify-center md:max-w-screen-lg">
-        <div className="flex w-full justify-end items-start mt-8 md:mt-0">
-          <div className="flex-col max-w-lg md:pl-10">
+    <div className="flex flex-col items-center justify-center mt-20 md:mt-32 px-8 md:px-0 md:flex-row">
+      <div className="flex-col items-center justify-center w-full md:max-w-screen-lg">
+        <div className="flex flex-row w-full">
+          <div className="w-1/2 hidden md:block"></div>
+          <div className="w-1/2">
             <span className="text-neutral-600 font-regular text-sm">
               Enterprise Grade Security
             </span>
-            <h1
-              className={`text-3xl md:text-4xl mt-4 font-medium text-[#171717] text-left leading-snug max-w-lg ${Open_Sans.className}`}
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row w-full mt-6">
+          <div className="hidden md:flex w-full justify-center md:justify-end items-start max-w-lg pt-4 md:pt-0 mt-6 md:mt-0">
+            <Carousel
+              orientation="vertical"
+              className="w-full md:mr-16 hover:cursor-pointer"
+              opts={{
+                align: "start",
+              }}
             >
-              Built with Privacy and Security in Mind
+              <CarouselContent className="w-full max-h-[300px]">
+                {securities.map((security, index) => (
+                  <CarouselItem key={index} className="w-full h-auto">
+                    <div className="relative flex-col items-center justify-center w-full rounded-lg aspect-video">
+                      <Image
+                        alt={security.title}
+                        src={security.image}
+                        className="select-none object-cover w-full h-full rounded-lg"
+                        placeholder="blur"
+                        draggable="false"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
+          <div className="flex-col w-full">
+            <h1
+              className={`text-3xl md:text-4xl font-medium text-[#171717] text-left leading-snug ${Open_Sans.className}`}
+            >
+              Built with Privacy in Mind
             </h1>
-            <p className="mt-4 mb-6 text-md font-light text-neutral-600 text-justify">
+            <p className="mt-4 mb-5 text-md md:text-sm font-light text-neutral-600 text-justify">
               We are committed to protect your data and privacy at all times.
               Our platform is compliant with GDPR and CCPA to ensure your data
               is safe and secure.
@@ -40,7 +70,7 @@ export default function Security() {
             <Button variant="outline" size="default" asChild>
               <Link href="/security">Learn More</Link>
             </Button>
-            <div className="flex space-x-4 mt-6">
+            <div className="flex space-x-4 mt-7">
               <Image
                 src={gdprBadge}
                 alt="GDPR"
@@ -48,7 +78,7 @@ export default function Security() {
                 placeholder="blur"
                 width={385}
                 height={500}
-                className="w-auto h-[94px] select-none -ml-1"
+                className="w-auto h-[76px] select-none -ml-1"
               />
               <Image
                 src={ccpaBadge}
@@ -57,32 +87,10 @@ export default function Security() {
                 placeholder="blur"
                 width={385}
                 height={500}
-                className="w-auto h-[94px] select-none -ml-1"
+                className="w-auto h-[76px] select-none -ml-1"
               />
             </div>
           </div>
-        </div>
-        <div className="w-full justify-start items-start pt-12 max-w-lg md:order-first hidden md:flex">
-          <Carousel
-            orientation="vertical"
-            className="w-full md:mr-16 mt-0.5 hover:cursor-pointer"
-          >
-            <CarouselContent className="h-[340px]">
-              {securities.map((security, index) => (
-                <CarouselItem key={index} className="h-[350px]">
-                  <div className="relative flex-col items-center justify-center w-full md:max-w-screen-lg h-[300px] rounded-lg">
-                    <Image
-                      src={security.image}
-                      alt={security.imageAlt}
-                      draggable="false"
-                      placeholder="blur"
-                      className="absolute z-10 select-none object-cover w-full h-full rounded-lg"
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
         </div>
       </div>
     </div>

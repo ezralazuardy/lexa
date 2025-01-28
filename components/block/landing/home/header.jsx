@@ -65,31 +65,35 @@ export default function Header() {
             <div
               className={`z-10 transition-all ease-out ${showRegister ? "transform -translate-x-28" : "transform translate-x-0"}`}
             >
-              <div className="flex flex-col md:flex-row gap-7">
+              <div className="flex gap-x-7">
                 {links.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`transition-colors duration-500 hover:text-black mt-8 md:mt-0 ${pathname === link.href ? "text-black font-semibold" : ""}`}
+                    className={`transition-colors duration-500 hover:text-black mt-8 ${pathname === link.href ? "text-black font-semibold" : ""}`}
                   >
                     {link.label}
                   </Link>
                 ))}
               </div>
             </div>
-            <Link
-              ref={registerButton}
-              href="/beta"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute md:relative z-0 top-0 right-0 mt-7 md:mt-0 transition-all ease-out opacity-0 md:opacity-100"
-            >
-              <Button size="sm">REGISTER</Button>
-            </Link>
+            <div className="absolute top-0 right-0 mt-6 pt-0.5">
+              <Button variant="default" size="sm" asChild>
+                <Link
+                  ref={registerButton}
+                  href="/beta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-opacity duration-200 ease-out opacity-0"
+                >
+                  REGISTER
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
-      <div className="hidden md:flex bg-gradient-to-b from-white to-transparent w-full pt-4 h-[8vh]"></div>
+      <div className="hidden md:flex bg-gradient-to-b from-white to-transparent w-full pt-4 h-[7vh]"></div>
     </div>
   );
 }

@@ -13,58 +13,65 @@ export default function Feature() {
   const features = getFeatures();
 
   return (
-    <div className="flex flex-col items-center justify-center px-8 md:px-0">
+    <div className="flex flex-col items-center justify-center mt-12 px-8 md:px-0">
       {features.map((feature, index) => (
-        <FeatureItem key={index} feature={feature} inverted={index % 2 !== 0} />
+        <FeatureItem
+          key={index}
+          index={index}
+          feature={feature}
+          inverted={index % 2 !== 0}
+        />
       ))}
     </div>
   );
 }
 
-export function FeatureItem({ feature, inverted = false }) {
+export function FeatureItem({ index, feature, inverted = false }) {
   return (
-    <div className="flex flex-col items-center justify-center w-full md:max-w-screen-lg mt-12 md:mt-24">
+    <div
+      className={`flex flex-col items-center justify-center w-full md:max-w-screen-lg mt-12 ${index > 0 ? "md:mt-24" : ""}`}
+    >
       <div
         className={`flex flex-col md:flex-row w-full ${inverted ? "md:flex-row-reverse" : ""}`}
       >
         <div className="flex flex-col w-full">
           <div className="flex">
             <feature.icon
-              className="w-5 h-5 md:w-7 md:h-7 mr-2 md:mr-3 mt-1"
+              className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 mt-1 md:mt-0"
               strokeWidth={1.4}
             />
             <h1
-              className={`text-xl md:text-2xl font-medium text-[#171717] text-left leading-snug max-w-sm ${Open_Sans.className}`}
+              className={`text-xl font-regular text-[#171717] text-left leading-snug max-w-sm ${Open_Sans.className}`}
             >
               {feature.title}
             </h1>
           </div>
           <p
-            className="mt-4 md:mt-6 text-xs font-light text-neutral-600 text-justify"
+            className="mt-4 text-xs md:text-sm font-light text-neutral-600 text-justify"
             dangerouslySetInnerHTML={{ __html: feature.long_description }}
           ></p>
-          <div className="mt-6 md:mt-10 mb-6 md:mb-0 flex justify-start">
+          <div className="mt-6 md:mt-6 mb-6 md:mb-0 flex justify-start">
             <ReadUseCaseButton feature={feature} />
           </div>
         </div>
         <div
-          className={`flex w-full ${inverted ? "justify-start items-start" : "justify-end items-end"} pt-2 max-w-lg`}
+          className={`flex w-full ${inverted ? "md:justify-start md:items-start" : "md:justify-end md:items-end"} md:max-w-lg`}
         >
           <Carousel
             orientation="vertical"
-            className={`w-full ${inverted ? "md:mr-16" : "md:ml-16"} hover:cursor-pointer`}
+            className={`w-full ${inverted ? "md:mr-16" : "md:ml-16"}`}
             opts={{
               align: "start",
             }}
           >
-            <CarouselContent className="h-[30vh] md:h-[42vh]">
-              <CarouselItem key={0} className="h-[30vh] md:h-[42vh]">
-                <div className="relative flex-col items-center justify-center w-full md:max-w-screen-lg rounded-lg h-[28vh] md:h-[40vh]">
+            <CarouselContent className="aspect-video w-full">
+              <CarouselItem key={feature.title} className="aspect-video w-full">
+                <div className="relative flex-col items-center justify-center w-full rounded-lg aspect-video">
                   <Image
-                    src={feature.image}
                     alt={feature.title}
+                    src={feature.image}
+                    className="select-none object-cover w-full h-full rounded-lg"
                     placeholder="blur"
-                    className="absolute z-10 select-none object-cover w-full h-full rounded-lg"
                     draggable="false"
                   />
                 </div>

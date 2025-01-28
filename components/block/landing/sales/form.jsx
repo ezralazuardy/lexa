@@ -1,43 +1,58 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import Spinner from "@/components/ui/spinner";
 import { Mail } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { forwardRef, useEffect, useRef } from "react";
 
 export default function Form() {
-  const [loading, setLoading] = useState(true);
+  const loader = useRef(null);
+  const form = useRef(null);
+  let timer1;
 
   useEffect(() => {
+    const l = loader?.current;
+    const f = form?.current;
+
+    if (!l || !f) return;
+
     const script = document.createElement("script");
     script.src = "https://tally.so/widgets/embed.js";
     script.async = true;
-    script.onload = () => setTimeout(() => setLoading(false), 2000);
+    script.onload = () =>
+      (timer1 = setTimeout(() => {
+        l.classList.add("opacity-0");
+        l.classList.remove("opacity-100");
+      }, 1000));
+
     document.body.appendChild(script);
+
     return () => {
+      clearTimeout(timer1);
       document.body.removeChild(script);
     };
   });
 
   return (
-    <div className="flex flex-col items-center justify-center mt-2 md:mt-12">
+    <div className="flex flex-col items-center justify-center mt-2">
       <div className="flex flex-col items-center justify-center w-full md:max-w-screen-md px-6 mx-0.5 md:px-0 md:mx-0">
-        <hr className="hidden md:block border-neutral-300 w-full mb-4" />
-        <div className="relative w-full h-auto">
-          {loading ? <FormLoader className="mt-7 px-2" /> : null}
+        <div className="relative w-full min-h-[75vh]">
+          <FormLoader
+            ref={loader}
+            className="z-10 absolute w-full mt-7 px-2 bg-white transition-opacity duration-1000 opacity-100"
+          />
           <iframe
+            ref={form}
             data-tally-src={process.env.NEXT_PUBLIC_TALLY_CONTACT_SALES}
             loading="lazy"
             width="100%"
             height="100%"
-            className={`w-full h-auto transition-opacity duration-1000 ${loading ? "opacity-0" : "opacity-100"}`}
+            className={`w-full h-auto`}
           ></iframe>
-          <div className="absolute right-0 bottom-0 w-[35vw] h-[8vh] bg-white"></div>
+          <div className="z-20 absolute right-0 bottom-0 w-[35vw] h-[10vh] bg-white"></div>
         </div>
-        <hr className="hidden md:block border-neutral-300 w-full mt-6 mb-4" />
       </div>
-      <div className="hidden md:flex flex-col w-full md:flex-row">
+      <div className="hidden md:flex flex-row w-full md:max-w-screen-md px-2 mt-6">
         <div className="w-full md:w-1/2 flex justify-center md:justify-start items-start mb-4 md:mb-0">
           <p className="text-xs font-light text-neutral-600 leading-normal text-justify md:text-left">
             Your information is safe with us.
@@ -83,29 +98,50 @@ export default function Form() {
   );
 }
 
-export function FormLoader({ className }) {
+export const FormLoader = forwardRef(function ({ className }, ref) {
   return (
-    <div className={`mx-auto ${className}`}>
-      <div className="mb-8">
-        <div className="h-6 bg-neutral-300 rounded w-1/3 mb-2 animate-pulse"></div>
-        <div className="h-10 bg-neutral-300 rounded animate-pulse"></div>
+    <div ref={ref} className={`mx-auto ${className}`}>
+      <div className="hidden md:block w-full">
+        <div className="mb-8">
+          <div className="h-6 bg-neutral-300 rounded w-1/3 mb-2 animate-pulse"></div>
+          <div className="h-10 bg-neutral-300 rounded animate-pulse"></div>
+        </div>
+        <div className="mb-8">
+          <div className="h-6 bg-neutral-300 rounded w-1/3 mb-2 animate-pulse"></div>
+          <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
+          <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
+          <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
+        </div>
+        <div className="mb-8">
+          <div className="h-6 bg-neutral-300 rounded w-1/3 mb-2 animate-pulse"></div>
+          <div className="h-20 bg-neutral-300 rounded animate-pulse"></div>
+        </div>
+        <div className="mb-0">
+          <div className="h-10 bg-neutral-300 rounded w-1/4 mb-2 animate-pulse"></div>
+        </div>
       </div>
-      <div className="mb-8">
-        <div className="h-6 bg-neutral-300 rounded w-1/3 mb-2 animate-pulse"></div>
-        <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
-        <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
-        <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
-        <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
-        <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
-        <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
-      </div>
-      <div className="mb-8">
-        <div className="h-6 bg-neutral-300 rounded w-1/3 mb-2 animate-pulse"></div>
-        <div className="h-20 bg-neutral-300 rounded animate-pulse"></div>
-      </div>
-      <div className="mb-0">
-        <div className="h-10 bg-neutral-300 rounded w-1/4 mb-2 animate-pulse"></div>
+      <div className="block md:hidden w-full">
+        <div className="mb-8">
+          <div className="h-6 bg-neutral-300 rounded w-1/3 mb-2 animate-pulse"></div>
+          <div className="h-10 bg-neutral-300 rounded animate-pulse"></div>
+        </div>
+        <div className="mb-8">
+          <div className="h-6 bg-neutral-300 rounded w-1/3 mb-2 animate-pulse"></div>
+          <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
+          <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
+          <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
+          <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
+          <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
+          <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
+        </div>
+        <div className="mb-8">
+          <div className="h-6 bg-neutral-300 rounded w-1/3 mb-2 animate-pulse"></div>
+          <div className="h-20 bg-neutral-300 rounded animate-pulse"></div>
+        </div>
+        <div className="mb-0">
+          <div className="h-10 bg-neutral-300 rounded w-1/4 mb-2 animate-pulse"></div>
+        </div>
       </div>
     </div>
   );
-}
+});

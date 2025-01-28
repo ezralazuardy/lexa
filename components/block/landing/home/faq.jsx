@@ -38,12 +38,17 @@ export default function FAQ() {
   ];
 
   return (
-    <div className="flex items-center justify-center mt-24 px-8 md:px-0">
+    <div className="flex items-center justify-center mt-20 md:mt-32 px-8 md:px-0">
       <div className="flex flex-col items-start justify-center w-full md:max-w-screen-lg">
-        <span className="text-neutral-600 font-regular text-sm">
-          Frequently Asked Question
-        </span>
-        <div className="flex flex-col md:flex-row w-full mt-4">
+        <div className="flex flex-row w-full">
+          <div className="w-1/2">
+            <span className="text-neutral-600 font-regular text-sm">
+              Frequently Asked Question
+            </span>
+          </div>
+          <div className="w-1/2 hidden md:block"></div>
+        </div>
+        <div className="flex flex-col md:flex-row w-full mt-6">
           <div className="flex flex-col w-full md:w-1/2">
             <h1
               className={`text-3xl md:text-4xl font-medium text-[#171717] text-left leading-snug max-w-sm ${Open_Sans.className}`}

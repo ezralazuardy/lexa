@@ -4,11 +4,11 @@ export default function ArticleImage({ uuid, blurhash }) {
   return (
     <div className="flex-col flex items-center justify-center w-full">
       <BlurHashImage
+        blurhash={blurhash}
         alt={uuid}
         src={`/images/news/${uuid}.png`}
-        blurhash={blurhash}
-        layout="responsive"
         draggable="false"
+        rounded="false"
         width={1024}
         height={576}
       />

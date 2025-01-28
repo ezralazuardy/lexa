@@ -20,7 +20,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="z-10 flex items-center justify-center mt-12 md:mt-16">
+      <div className="z-10 flex items-center justify-center mt-12 md:mt-14">
         <HeroVideo />
       </div>
     </>

@@ -59,28 +59,33 @@ export default function Feature() {
   }, [carouselApi]);
 
   return (
-    <div className="flex flex-col items-center justify-center mt-24 px-8 md:px-0 md:flex-row">
+    <div className="flex flex-col items-center justify-center mt-20 md:mt-32 px-8 md:px-0 md:flex-row">
       <div className="flex-col items-center justify-center w-full md:max-w-screen-lg">
-        <span className="text-neutral-600 font-regular text-sm">
-          Powerful Features
-        </span>
-        <div className="flex flex-col md:flex-row w-full mt-4">
+        <div className="flex flex-row w-full">
+          <div className="w-1/2">
+            <span className="text-neutral-600 font-regular text-sm">
+              Powerful Features
+            </span>
+          </div>
+          <div className="w-1/2 hidden md:block"></div>
+        </div>
+        <div className="flex flex-col md:flex-row w-full mt-6">
           <div className="flex-col w-full">
             <h1
-              className={`text-3xl md:text-4xl font-medium text-[#171717] text-left leading-snug max-w-sm ${Open_Sans.className}`}
+              className={`text-3xl md:text-4xl font-medium text-[#171717] text-left leading-snug ${Open_Sans.className}`}
             >
-              Efficient Tools for Modern Legal Work
+              Built for Modern Legal Work
             </h1>
-            <ul className="mt-7 grid grid-cols-2 gap-x-8 gap-y-7">
+            <ul className="grid grid-cols-2 gap-x-8 gap-y-6 mt-7 md:mt-8">
               {features.map((feature, index) => (
                 <li
                   id={`feature-item-${index}`}
                   key={index}
-                  className={`flex items-start space-x-4 hover:cursor-pointer transition-opacity duration-1000 ${index === 0 ? "opacity-100" : "opacity-50"}`}
+                  className={`flex items-start space-x-4 md:space-x-3 hover:cursor-pointer transition-opacity duration-1000 ${index === 0 ? "opacity-100" : "opacity-50"}`}
                   onClick={() => handleGoToSlide(index)}
                 >
-                  <div className="mt-0.5">
-                    <feature.icon className="w-5 h-5" strokeWidth={1.5} />
+                  <div className="mt-1">
+                    <feature.icon className="w-5 h-5" strokeWidth={1.4} />
                   </div>
                   <div>
                     <h2 className="text-md font-regular font-neutral-800">
@@ -94,11 +99,10 @@ export default function Feature() {
               ))}
             </ul>
           </div>
-          <div className="flex w-full justify-center md:justify-end items-end pt-4 max-w-lg mt-6 md:mt-0">
+          <div className="flex w-full justify-center md:justify-end items-start max-w-lg pt-4 md:pt-0 mt-6 md:mt-0">
             <Carousel
               orientation="vertical"
               className="w-full md:ml-16 hover:cursor-pointer"
-              setApi={setCarouselApi}
               opts={{
                 align: "start",
               }}
@@ -107,16 +111,17 @@ export default function Feature() {
                   delay: 4000,
                 }),
               ]}
+              setApi={setCarouselApi}
             >
-              <CarouselContent className="h-[30vh] md:h-[42vh]">
+              <CarouselContent className="w-full max-h-[310px] md:max-h-[280px]">
                 {features.map((feature, index) => (
-                  <CarouselItem key={index} className="h-[30vh] md:h-[42vh]">
-                    <div className="relative flex-col items-center justify-center w-full md:max-w-screen-lg h-[28vh] md:h-[40vh] rounded-lg">
+                  <CarouselItem key={index} className="w-full h-auto">
+                    <div className="relative flex-col items-center justify-center w-full rounded-lg aspect-video">
                       <Image
-                        src={feature.image}
                         alt={feature.title}
+                        src={feature.image}
+                        className="select-none object-cover w-full h-full rounded-lg"
                         placeholder="blur"
-                        className="absolute z-10 select-none object-cover w-full h-full rounded-lg"
                         draggable="false"
                       />
                     </div>

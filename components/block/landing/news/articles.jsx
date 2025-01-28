@@ -22,10 +22,11 @@ export function Item({ data }) {
       className="relative w-full transition-opacity duration-1000 hover:cursor-pointer hover:opacity-70"
     >
       <BlurHashImage
+        blurhash={data.blurhash}
         alt={data.headline}
         src={`/images/news/${data.uuid}.png`}
-        blurhash={data.blurhash}
         draggable="false"
+        rounded="true"
       />
       <h2 className="text-lg font-medium text-[#171717] mt-6 md:mt-4 leading-snug px-8 md:px-0">
         {data.headline}

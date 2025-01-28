@@ -9,22 +9,20 @@ import Link from "next/link";
 
 export default function Standard() {
   return (
-    <div className="flex flex-col items-center justify-center mt-24">
+    <div className="flex flex-col items-center justify-center mt-20 md:mt-32">
       <div className="flex flex-col items-center justify-center w-full md:max-w-screen-lg">
-        <span className="text-neutral-600 font-regular text-sm text-center">
+        <span className="w-full md:max-w-3xl text-neutral-600 font-regular text-sm text-center">
           Standards
         </span>
-        <div className="flex flex-col items-center justify-center w-full mt-6">
-          <h1 className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-3xl md:text-6xl font-medium leading-snug text-transparent dark:from-white dark:to-slate-900/10 px-8 md:px-0">
-            Industry Standard for Data Privacy
-          </h1>
-          <p className="text-sm md:text-md font-light text-neutral-600 text-center leading-snug mt-6 md:mt-8 md:max-w-screen-md px-8 md:px-12">
-            LEXA is certified and compliant with
-          </p>
-        </div>
+        <h1 className="w-full md:max-w-4xl mt-6 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-4xl md:text-5xl font-medium leading-snug md:leading-tight text-transparent dark:from-white dark:to-slate-900/10 px-8 md:px-0">
+          Industry Standard for Data Privacy
+        </h1>
+        <p className="w-full md:max-w-4xl text-md font-light text-neutral-600 text-center leading-snug mt-6 md:mt-8 px-8 md:px-0">
+          LEXA is certified and compliant with
+        </p>
       </div>
       <div className="flex flex-col items-center justify-center w-full mt-6 md:mt-8">
-        <div className="flex flex-col items-center justify-center relative w-full py-16">
+        <div className="flex flex-col items-center justify-center relative w-full py-12">
           <DotPattern className={cn("z-0 absolute inset-0 fill-neutral-400")} />
           <div className="flex md:space-x-12">
             <Link
@@ -40,7 +38,7 @@ export default function Standard() {
                 placeholder="blur"
                 width={385}
                 height={500}
-                className="w-auto h-[120px] md:h-[180px] select-none"
+                className="w-auto h-[120px] md:h-[150px] select-none"
               />
             </Link>
             <Link
@@ -56,16 +54,16 @@ export default function Standard() {
                 placeholder="blur"
                 width={385}
                 height={500}
-                className="w-auto h-[120px] md:h-[180px] select-none"
+                className="w-auto h-[120px] md:h-[150px] select-none"
               />
             </Link>
           </div>
         </div>
-        <p className="text-sm md:text-md font-light text-neutral-600 text-justify md:text-center leading-snug mt-6 md:mt-8 md:max-w-screen-md px-8 md:px-12">
+        <p className="w-full md:max-w-4xl text-justify md:text-center text-md font-light text-neutral-600 leading-snug mt-6 md:mt-8 px-8 md:px-0">
           As our commitment to data privacy, other standards, compliance, and
           certifications will be added in the future.
         </p>
-        <p className="text-xs md:text-sm w-full text-justify md:text-center mt-6 md:mt-8 font-light text-neutral-600 md:max-w-screen-md px-8 md:px-12">
+        <p className="w-full md:max-w-xl text-justify md:text-center text-xs font-light text-neutral-600 leading-snug mt-4 md:mt-6 px-8 md:px-0">
           For more information, please read our
           <Link
             href="/legal/privacy-policy"

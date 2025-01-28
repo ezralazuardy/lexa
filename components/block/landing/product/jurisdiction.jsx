@@ -14,15 +14,15 @@ export default function Jurisdiction() {
   ].sort((a, b) => b.supported - a.supported);
 
   return (
-    <div className="flex flex-col items-center justify-center mt-16 md:mt-24 px-8 md:px-0">
+    <div className="flex flex-col items-center justify-center mt-20 md:mt-32 px-8 md:px-0">
       <div className="flex flex-col items-center justify-center w-full md:max-w-screen-lg">
-        <span className="text-neutral-600 font-regular text-sm text-center">
+        <span className="w-full md:max-w-xl text-neutral-600 font-regular text-sm text-center">
           Regional Focus
         </span>
-        <h1 className="mt-6 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-3xl mg:text-6xl font-medium leading-snug text-transparent dark:from-white dark:to-slate-900/10">
+        <h1 className="w-full md:max-w-xl mt-6 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-4xl md:text-5xl font-medium leading-snug md:leading-tight text-transparent dark:from-white dark:to-slate-900/10 px-8 md:px-0">
           Fine Tuned for Southeast Asian Jurisdiction
         </h1>
-        <p className="text-md font-light text-neutral-600 text-justify md:text-center leading-snug mt-6 md:mt-10 w-full md:max-w-lg md:px-12">
+        <p className="w-full md:max-w-4xl text-md font-light text-neutral-600 text-justify md:text-center leading-snug mt-6 md:mt-8 md:px-0">
           While being a global platform, LEXA is fine-tuned by our engineers for
           Southeast Asian jurisdictions, providing accurate and relevant tools
           for legal professionals across the region and supporting 16+
@@ -43,8 +43,8 @@ export default function Jurisdiction() {
           ))}
           <div className="absolute w-full h-full bg-gradient-to-t from-white to-transparent opacity-70"></div>
         </div>
-        <p className="text-sm font-light text-neutral-600 opacity-80 text-center leading-snug mt-8 md:mt-12 md:max-w-screen-lg px-12">
-          more countries support is coming soon.
+        <p className="text-md font-light text-neutral-600 opacity-80 text-center leading-snug mt-8 md:mt-12 md:max-w-screen-lg px-12">
+          More countries support is coming soon.
         </p>
       </div>
     </div>

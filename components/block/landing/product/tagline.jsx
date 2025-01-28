@@ -28,18 +28,18 @@ export default function Tagline() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center mt-16 md:mt-32 px-8 md:px-0">
-      <div className="flex flex-col w-full md:max-w-screen-lg">
+    <div className="flex flex-col items-center justify-center mt-16 md:mt-24 px-8 md:px-0">
+      <div className="flex flex-col w-full md:max-w-screen-lg text-3xl md:text-5xl">
         <span className="text-neutral-600 font-regular text-sm text-start">
           Features
         </span>
         <h1
-          className={`text-xl md:text-6xl font-light text-[#171717] text-left leading-snug mt-6 ${Open_Sans.className}`}
+          className={`font-light text-[#171717] text-left leading-snug mt-6 ${Open_Sans.className}`}
         >
           Simple legal platform that makes
         </h1>
         <h1
-          className={`text-xl md:text-6xl font-regular text-[#171717] text-left leading-snug my-0 md:my-4 ${Open_Sans.className}`}
+          className={`font-regular text-[#171717] text-left leading-snug my-0 md:my-2 ${Open_Sans.className}`}
         >
           <TypeAnimation
             sequence={getTypingAnimationSequence(words)}
@@ -48,7 +48,7 @@ export default function Tagline() {
           />
         </h1>
         <h1
-          className={`text-xl md:text-6xl font-light text-[#171717] text-left leading-snug ${Open_Sans.className}`}
+          className={`font-light text-[#171717] text-left leading-snug ${Open_Sans.className}`}
         >
           become so much faster, easier.
         </h1>

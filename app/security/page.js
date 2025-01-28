@@ -14,7 +14,7 @@ export default function Home() {
       <Measure />
       <Standard />
       <Privacy />
-      <CTA className="mt-24" />
+      <CTA className="mt-20 md:mt-32" />
       <Footer />
     </div>
   );
