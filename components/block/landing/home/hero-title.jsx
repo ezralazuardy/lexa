@@ -18,7 +18,7 @@ export default function HeroTitle() {
       <h1
         className={`text-4xl md:text-6xl font-medium text-[#171717] text-center leading-snug ${Open_Sans.className}`}
       >
-        <span className="md:mr-4">Intelligence Legal</span>
+        <span className="md:mr-4">Intelligent Legal</span>
         <br className="md:hidden" />
         Assistant for
         <WordRotate
