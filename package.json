@@ -45,6 +45,7 @@
     "tailwindcss": "^3.4.17"
   },
   "trustedDependencies": [
-    "@vercel/speed-insights"
+    "@vercel/speed-insights",
+    "sharp"
   ]
 }
