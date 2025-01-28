@@ -76,8 +76,12 @@ export default function RootLayout({ children }) {
           {children}
         </ThemeProvider>
         <Toaster position="bottom-left" />
-        {/* <Analytics mode="production" /> */}
-        {/* <SpeedInsights /> */}
+        {process.env.NODE_ENV === "production" && (
+          <>
+            <Analytics mode="production" />
+            <SpeedInsights />
+          </>
+        )}
         <Crisp />
       </body>
     </html>
