@@ -1,9 +1,4 @@
 import { Button } from "@/components/ui/button";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
 import Open_Sans from "@/lib/fonts/open-sans";
 import { getFeatures } from "@/lib/services/feature-service";
 import Image from "next/image";
@@ -13,7 +8,7 @@ export default function Feature() {
   const features = getFeatures();
 
   return (
-    <div className="flex flex-col items-center justify-center md:mt-12 px-8 md:px-0">
+    <div className="flex flex-col items-center justify-center md:mt-8 px-8 md:px-0">
       {features.map((feature, index) => (
         <FeatureItem
           key={index}
@@ -31,9 +26,7 @@ export function FeatureItem({ index, feature, inverted = false }) {
     <div
       className={`flex flex-col items-center justify-center w-full md:max-w-screen-lg mt-12 ${index > 0 ? "md:mt-24" : ""}`}
     >
-      <div
-        className={`flex flex-col md:flex-row w-full ${inverted ? "md:flex-row-reverse" : ""}`}
-      >
+      <div className={`flex flex-col md:flex-row w-full md:gap-16`}>
         <div className="flex flex-col w-full">
           <div className="flex">
             <feature.icon
@@ -50,34 +43,22 @@ export function FeatureItem({ index, feature, inverted = false }) {
             className="mt-4 text-xs md:text-sm font-light text-neutral-600 text-justify"
             dangerouslySetInnerHTML={{ __html: feature.long_description }}
           ></p>
-          <div className="mt-6 md:mt-6 mb-6 md:mb-0 flex justify-start">
+          <div className="mt-6 md:mt-7 mb-6 md:mb-0 flex justify-start">
             <ReadUseCaseButton feature={feature} />
           </div>
         </div>
         <div
-          className={`flex w-full ${inverted ? "md:justify-start md:items-start" : "md:justify-end md:items-end"} md:max-w-lg`}
+          className={`flex flex-col w-full ${inverted ? "md:order-first" : ""}`}
         >
-          <Carousel
-            orientation="vertical"
-            className={`w-full ${inverted ? "md:mr-16" : "md:ml-16"}`}
-            opts={{
-              align: "start",
-            }}
-          >
-            <CarouselContent className="aspect-video w-full">
-              <CarouselItem key={feature.title} className="aspect-video w-full">
-                <div className="relative flex-col items-center justify-center w-full rounded-lg aspect-video">
-                  <Image
-                    alt={feature.title}
-                    src={feature.image}
-                    className="select-none object-cover w-full h-full rounded-lg"
-                    placeholder="blur"
-                    draggable="false"
-                  />
-                </div>
-              </CarouselItem>
-            </CarouselContent>
-          </Carousel>
+          <div className="relative flex-col items-center justify-center w-full rounded-lg aspect-video">
+            <Image
+              alt={feature.title}
+              src={feature.image}
+              className="select-none object-cover w-full h-full rounded-lg"
+              placeholder="blur"
+              draggable="false"
+            />
+          </div>
         </div>
       </div>
     </div>
