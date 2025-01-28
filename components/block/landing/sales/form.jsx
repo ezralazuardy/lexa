@@ -1,15 +1,19 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import Spinner from "@/components/ui/spinner";
 import { Mail } from "lucide-react";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Form() {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://tally.so/widgets/embed.js";
     script.async = true;
+    script.onload = () => setTimeout(() => setLoading(false), 2000);
     document.body.appendChild(script);
     return () => {
       document.body.removeChild(script);
@@ -20,13 +24,14 @@ export default function Form() {
     <div className="flex flex-col items-center justify-center mt-2 md:mt-12">
       <div className="flex flex-col items-center justify-center w-full md:max-w-screen-md px-6 mx-0.5 md:px-0 md:mx-0">
         <hr className="hidden md:block border-neutral-300 w-full mb-4" />
-        <div className="relative w-full min-h-[70vh]">
+        <div className="relative w-full h-auto">
+          {loading ? <FormLoader className="mt-7 px-2" /> : null}
           <iframe
             data-tally-src={process.env.NEXT_PUBLIC_TALLY_CONTACT_SALES}
             loading="lazy"
             width="100%"
             height="100%"
-            className="w-full h-auto"
+            className={`w-full h-auto transition-opacity duration-1000 ${loading ? "opacity-0" : "opacity-100"}`}
           ></iframe>
           <div className="absolute right-0 bottom-0 w-[35vw] h-[8vh] bg-white"></div>
         </div>
@@ -73,6 +78,33 @@ export default function Form() {
             </Link>
           </Button>
         </div>
+      </div>
+    </div>
+  );
+}
+
+export function FormLoader({ className }) {
+  return (
+    <div className={`mx-auto ${className}`}>
+      <div className="mb-8">
+        <div className="h-6 bg-neutral-300 rounded w-1/3 mb-2 animate-pulse"></div>
+        <div className="h-10 bg-neutral-300 rounded animate-pulse"></div>
+      </div>
+      <div className="mb-8">
+        <div className="h-6 bg-neutral-300 rounded w-1/3 mb-2 animate-pulse"></div>
+        <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
+        <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
+        <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
+        <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
+        <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
+        <div className="h-10 bg-neutral-300 rounded animate-pulse mb-2"></div>
+      </div>
+      <div className="mb-8">
+        <div className="h-6 bg-neutral-300 rounded w-1/3 mb-2 animate-pulse"></div>
+        <div className="h-20 bg-neutral-300 rounded animate-pulse"></div>
+      </div>
+      <div className="mb-0">
+        <div className="h-10 bg-neutral-300 rounded w-1/4 mb-2 animate-pulse"></div>
       </div>
     </div>
   );

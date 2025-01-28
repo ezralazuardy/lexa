@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 export default function CTA({ className }) {
   return (
     <div className={`flex items-center justify-center ${className}`}>
-      <div className="relative flex-col items-center justify-center w-full md:max-w-screen-lg h-[53vh] md:h-[62vh] bg-black rounded-none md:rounded-lg">
+      <div className="relative flex-col items-center justify-center w-full md:max-w-screen-lg h-[58vh] md:h-[62vh] bg-black rounded-none md:rounded-lg">
         <Image
           alt="CTA"
           src={cta}

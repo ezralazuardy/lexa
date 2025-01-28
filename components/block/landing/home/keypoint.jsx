@@ -60,7 +60,7 @@ export default function Keypoint() {
                   className="mr-0 md:mr-2 mb-4"
                   strokeWidth={1.3}
                 />
-                <h2 className="text-xs md:text-lg font-light leading-none">
+                <h2 className="text-sm md:text-lg font-light leading-none">
                   {keypoint.title}
                 </h2>
               </div>

@@ -53,7 +53,7 @@ export default function Measure() {
               >
                 <div className="flex flex-col items-center md:items-start">
                   <measure.icon className="mr-2 mb-4" strokeWidth={1.3} />
-                  <h2 className="text-sm md:text-lg font-light text-center md:text-start leading-snug">
+                  <h2 className="text-sm md:text-lg font-light text-center md:text-start leading-snug px-2 md:px-0">
                     {measure.title}
                   </h2>
                 </div>

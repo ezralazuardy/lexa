@@ -51,8 +51,8 @@ export default function Header() {
 
   return (
     <div id="header" className="fixed top-0 left-0 right-0 flex-col z-50">
-      <div className="flex bg-white/80 backdrop-blur md:bg-white justify-between items-center w-full px-8 md:px-0 border-b border-neutral-400 md:border-none shadow-lg md:shadow-none">
-        <div className="flex justify-between items-center w-full md:max-w-screen-lg pt-4 pb-6 mx-auto">
+      <div className="flex bg-white backdrop-blur justify-between items-center w-full px-8 md:px-0 border-b border-neutral-400 md:border-none shadow-lg md:shadow-none">
+        <div className="flex justify-between items-center w-full md:max-w-screen-lg pt-3 md:pt-4 pb-5 mx-auto">
           <div className="pt-4 md:pt-8">
             <Link href="/">
               <Logo className="text-2xl" />
