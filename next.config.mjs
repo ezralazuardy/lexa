@@ -7,6 +7,8 @@ const nextConfig = {
       "@next/third-parties",
       "@radix-ui/react-accordion",
       "@radix-ui/react-avatar",
+      "@radix-ui/react-dialog",
+      "@radix-ui/react-scroll-area",
       "@radix-ui/react-slot",
       "@radix-ui/react-tooltip",
       "@vercel/analytics",
