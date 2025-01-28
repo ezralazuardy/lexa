@@ -3,7 +3,6 @@ const nextConfig = {
   experimental: {
     webpackMemoryOptimizations: true,
     optimizePackageImports: [
-      "@fullhuman/postcss-purgecss",
       "@next/third-parties",
       "@radix-ui/react-accordion",
       "@radix-ui/react-avatar",
