@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
+    reactCompiler: true,
     webpackMemoryOptimizations: true,
     optimizePackageImports: [
       "@next/third-parties",
