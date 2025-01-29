@@ -3,6 +3,30 @@ import Open_Sans from "@/lib/fonts/open-sans";
 
 const words = [
   "A Brilliant Lawyer",
+  "The In-House Counsel",
+  "A Startup Founder",
+  "An Investigative Expert",
+  "An Ambitious Founder",
+  "The Modern Law Firms",
+  "The Business Owners",
+  "Corporate Legal Divisions",
+  "Dispute Resolution Pros",
+  "The General Counsels",
+  "The In-House Counsel",
+  "Litigation Experts",
+  "The M&A Lawyers",
+  "Regulatory Advisors",
+  "Solo Practitioners",
+  "Law Practice Groups",
+  "Law Practitioners",
+  "Legal Consultants",
+  "The Legal Innovators",
+  "Legal Professionals",
+];
+
+const longWords = [
+  "A Brilliant Lawyer",
+  "The In-House Counsel",
   "A Startup Founder",
   "An Investigative Expert",
   "An Ambitious Founder",
@@ -28,7 +52,7 @@ export default function HeroTitle() {
   return (
     <div className="flex-col items-center justify-center w-full">
       <h1
-        className={`text-4xl md:text-6xl font-medium text-[#171717] text-center leading-snug ${Open_Sans.className}`}
+        className={`home-hero-title md:text-6xl font-medium text-[#171717] text-center leading-snug ${Open_Sans.className}`}
       >
         <span className="md:mr-4">Intelligent Legal</span>
         <br className="md:hidden" />
@@ -36,10 +60,15 @@ export default function HeroTitle() {
         <WordRotate
           words={words}
           duration="4000"
-          className="-mt-2 pt-0.5 md:mt-2 md:pt-0 min-h-[13vh] md:min-h-max"
+          className="block md:hidden -mt-2 pt-0.5 px-4 min-h-[13vh]"
+        />
+        <WordRotate
+          words={longWords}
+          duration="4000"
+          className="hidden md:block"
         />
       </h1>
-      <p className="text-sm md:text-lg font-light text-neutral-600 text-center leading-snug mt-2 md:mt-8">
+      <p className="w-full text-sm md:text-lg font-light text-neutral-600 text-center leading-snug px-6 md:mt-8">
         Streamline your Legal Workflows with Advanced AI-Powered Solutions.
       </p>
     </div>

@@ -37,7 +37,7 @@ export default function Tagline() {
           Features
         </span>
         <h1
-          className={`font-light text-[#171717] text-left leading-snug mt-6 ${Open_Sans.className}`}
+          className={`font-light text-[#171717] text-left leading-snug mt-4 md:mt-6 ${Open_Sans.className}`}
         >
           Simple legal platform that makes
         </h1>

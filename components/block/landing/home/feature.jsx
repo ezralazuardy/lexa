@@ -67,7 +67,7 @@ export default function Feature() {
             Powerful Features
           </span>
         </div>
-        <div className="flex flex-col md:flex-row w-full mt-6">
+        <div className="flex flex-col md:flex-row w-full mt-4 md:mt-6">
           <div className="flex-col w-full">
             <h1
               className={`text-3xl md:text-4xl font-medium text-[#171717] text-left leading-snug ${Open_Sans.className}`}

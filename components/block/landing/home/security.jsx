@@ -30,7 +30,7 @@ export default function Security() {
             </span>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row w-full mt-6">
+        <div className="flex flex-col md:flex-row w-full mt-4 md:mt-6">
           <div className="hidden md:flex w-full justify-center md:justify-end items-start max-w-lg pt-4 md:pt-0 mt-6 md:mt-0">
             <Carousel
               orientation="horizontal"

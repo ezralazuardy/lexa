@@ -13,7 +13,7 @@ export default async function Article({ params }) {
   return (
     <div className="relative h-full w-full">
       <Header />
-      <div className="flex-col flex items-center justify-center mt-[17vh] lg:mt-[20vh]">
+      <div className="flex-col flex items-center justify-center mt-[15vh] lg:mt-[20vh]">
         <div className="flex-col items-center justify-center w-full mb-16 px-8 md:px-0">
           <ArticleBreadcrumb path={`/legal/${slug}`} />
         </div>

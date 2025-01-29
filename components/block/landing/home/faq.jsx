@@ -45,7 +45,7 @@ export default function FAQ() {
             Frequently Asked Question
           </span>
         </div>
-        <div className="flex flex-col md:flex-row w-full mt-6">
+        <div className="flex flex-col md:flex-row w-full mt-4 md:mt-6">
           <div className="flex flex-col w-full md:w-1/2">
             <h1
               className={`text-3xl md:text-4xl font-medium text-[#171717] text-left leading-snug max-w-sm ${Open_Sans.className}`}
