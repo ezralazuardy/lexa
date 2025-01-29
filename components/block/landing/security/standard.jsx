@@ -7,6 +7,19 @@ import gdprBadge from "@/public/images/badges/gdpr-badge.png";
 import Image from "next/image";
 import Link from "next/link";
 
+const badges = [
+  {
+    src: gdprBadge,
+    alt: "GDPR",
+    link: "https://gdpr.eu",
+  },
+  {
+    src: ccpaBadge,
+    alt: "CCPA",
+    link: "https://oag.ca.gov/privacy/ccpa",
+  },
+];
+
 export default function Standard() {
   return (
     <div className="flex flex-col items-center justify-center mt-20 md:mt-32">
@@ -25,34 +38,23 @@ export default function Standard() {
         <div className="flex flex-col items-center justify-center relative w-full py-12">
           <DotPattern className={cn("z-0 absolute inset-0 fill-neutral-400")} />
           <div className="flex md:space-x-12">
-            <Link
-              href="https://gdpr.eu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="z-10 transition-all duration-500 hover:scale-110 bg-white p-4"
-            >
-              <Image
-                src={gdprBadge}
-                alt="GDPR"
-                draggable="false"
-                placeholder="blur"
-                className="w-auto h-[120px] md:h-[150px] select-none"
-              />
-            </Link>
-            <Link
-              href="https://oag.ca.gov/privacy/ccpa"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="z-10 transition-all duration-500 hover:scale-110 bg-white p-4"
-            >
-              <Image
-                src={ccpaBadge}
-                alt="CCPA"
-                draggable="false"
-                placeholder="blur"
-                className="w-auto h-[120px] md:h-[150px] select-none"
-              />
-            </Link>
+            {badges.map((badge, index) => (
+              <Link
+                key={index}
+                href={badge.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="z-10 transition-all duration-500 hover:scale-110 bg-white p-4"
+              >
+                <Image
+                  src={badge.src}
+                  alt={badge.alt}
+                  draggable="false"
+                  placeholder="blur"
+                  className="w-auto h-[120px] md:h-[150px] select-none"
+                />
+              </Link>
+            ))}
           </div>
         </div>
         <p className="w-full md:max-w-4xl text-justify md:text-center text-md font-light text-neutral-600 leading-snug mt-6 md:mt-8 px-8 md:px-0">

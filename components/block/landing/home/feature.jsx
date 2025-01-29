@@ -11,10 +11,11 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+const features = getFeatures();
+
 export default function Feature() {
-  const features = getFeatures();
   const [carouselApi, setCarouselApi] = useState(null);
-  let carouselAutoplayThrottleTimer;
+  let timer1;
 
   const handleGoToSlide = (index) => {
     if (carouselApi) {
@@ -30,9 +31,9 @@ export default function Feature() {
     for (let i = 0; i < features.length; i++) {
       if (i !== index) deactivateFeatureItem(i);
     }
-    clearTimeout(carouselAutoplayThrottleTimer);
+    clearTimeout(timer1);
     carouselApi.plugins().autoplay.stop();
-    carouselAutoplayThrottleTimer = setTimeout(() => {
+    timer1 = setTimeout(() => {
       carouselApi.plugins().autoplay.play();
     }, 4000);
   };
@@ -54,7 +55,7 @@ export default function Feature() {
     });
 
     return () => {
-      clearTimeout(carouselAutoplayThrottleTimer);
+      clearTimeout(timer1);
     };
   }, [carouselApi]);
 

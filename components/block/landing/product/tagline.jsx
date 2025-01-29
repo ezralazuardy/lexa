@@ -1,31 +1,34 @@
 "use client";
 
 import Open_Sans from "@/lib/fonts/open-sans";
-import { getTypingAnimationSequence } from "@/lib/utils";
+import { getTypingAnimationSequence, shuffleArray } from "@/lib/utils";
 import { TypeAnimation } from "react-type-animation";
 
+const words = [
+  "extracting key terms",
+  "analyzing agreements",
+  "comparing letters",
+  "drafting contracts",
+  "legal research",
+  "summarizing documents",
+  "compliance risks",
+  "organizing case files",
+  "generating legal reports",
+  "reviewing court decisions",
+  "customizing templates",
+  "team workflows",
+  "managing document versions",
+  "creating memos",
+  "automating tasks",
+  "assessing policy risks",
+  "monitoring legal updates",
+  "streamlining e-discovery",
+  "verifying legal citations",
+  "detecting conflicts",
+];
+
 export default function Tagline() {
-  const words = [
-    "extracting key terms",
-    "analyzing agreements",
-    "comparing letters",
-    "drafting contracts",
-    "legal research",
-    "summarizing documents",
-    "compliance risks",
-    "organizing case files",
-    "tracking communications",
-    "reviewing court decisions",
-    "customizing templates",
-    "team workflows",
-    "managing versions",
-    "creating memos",
-    "automating tasks",
-    "assessing risks in policies",
-    "multi-language translations",
-    "monitoring updates",
-    "streamlining e-discovery",
-  ];
+  const shuffledWords = shuffleArray(words);
 
   return (
     <div className="flex flex-col items-center justify-center mt-16 md:mt-24 px-8 md:px-0">
@@ -42,7 +45,7 @@ export default function Tagline() {
           className={`font-regular text-[#171717] text-left leading-snug my-2 md:my-2 ${Open_Sans.className}`}
         >
           <TypeAnimation
-            sequence={getTypingAnimationSequence(words)}
+            sequence={getTypingAnimationSequence(shuffledWords)}
             speed={60}
             repeat={Infinity}
           />

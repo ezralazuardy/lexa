@@ -1,5 +1,5 @@
+import { Brain, Equal, Heart, Lock, Plus } from "lucide-react";
 import Link from "next/link";
-import { Brain, Lock, Heart, Plus, Equal } from "lucide-react";
 
 export default function Privacy() {
   return (
@@ -17,7 +17,7 @@ export default function Privacy() {
             strokeWidth={0.4}
           />
           <Plus
-            className="w-10 h-10 md:w-14 md:h-14 text-black transition-transform duration-500 hover:scale-110 mx-3 md:mx-6"
+            className="w-10 h-10 md:w-14 md:h-14 text-black transition-transform duration-500 hover:scale-110 mx-3 md:mx-5"
             strokeWidth={0.4}
           />
           <Lock
@@ -25,7 +25,7 @@ export default function Privacy() {
             strokeWidth={0.4}
           />
           <Equal
-            className="w-10 h-10 md:w-14 md:h-14 text-black transition-transform duration-500 hover:scale-110 mx-3 md:mx-6"
+            className="w-10 h-10 md:w-14 md:h-14 text-black transition-transform duration-500 hover:scale-110 mx-3 md:mx-5"
             strokeWidth={0.4}
           />
           <Heart

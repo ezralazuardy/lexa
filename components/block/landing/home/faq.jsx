@@ -8,35 +8,35 @@ import { Button } from "@/components/ui/button";
 import Open_Sans from "@/lib/fonts/open-sans";
 import Link from "next/link";
 
-export default function FAQ() {
-  const faqs = [
-    {
-      question: "Is LEXA compatible with different legal systems?",
-      answer:
-        "Yes, our platform supports 16+ languages and is specifically designed for Southeast Asian legal frameworks. We've built specialized AI models that understand nuanced legal terminology across jurisdictions like Indonesia, Malaysia, Singapore, and Thailand, ensuring accurate and contextually relevant research.",
-    },
-    {
-      question: "How secure is my data on LEXA?",
-      answer:
-        "We use enterprise-grade AES-256 encryption, implement multi-factor authentication, and comply with GDPR and CCPA data protection regulations. Our secure cloud infrastructure ensures your sensitive legal documents remain confidential and protected against unauthorized access.",
-    },
-    {
-      question: "Can I try LEXA before purchasing?",
-      answer:
-        "We offer a 14-day free trial that provides full access to our core features. No credit card required. Explore the AI assistant, research tools, and document management capabilities to evaluate how LEXA can transform your legal workflow.",
-    },
-    {
-      question: "How does LEXA's AI understand legal context?",
-      answer:
-        "Our AI is trained on extensive legal documents from Southeast Asian jurisdictions. Using advanced natural language processing and machine learning, we analyze case laws, statutes, and legal precedents to provide precise, contextually accurate insights.",
-    },
-    {
-      question: "When will LEXA be available for public?",
-      answer:
-        "Our public launch is planned for Q3 2025. We're currently in a private beta, refining features based on early user feedback. Professionals interested in early access can join our waitlist via Private Beta Registration to receive priority onboarding and exclusive beta testing opportunities.",
-    },
-  ];
+const faqs = [
+  {
+    question: "Is LEXA compatible with different legal systems?",
+    answer:
+      "Yes, our platform supports 16+ languages and is specifically designed for Southeast Asian legal frameworks. We've built specialized AI models that understand nuanced legal terminology across jurisdictions like Indonesia, Malaysia, Singapore, and Thailand, ensuring accurate and contextually relevant research.",
+  },
+  {
+    question: "How secure is my data on LEXA?",
+    answer:
+      "We use enterprise-grade AES-256 encryption, implement multi-factor authentication, and comply with GDPR and CCPA data protection regulations. Our secure cloud infrastructure ensures your sensitive legal documents remain confidential and protected against unauthorized access.",
+  },
+  {
+    question: "Can I try LEXA before purchasing?",
+    answer:
+      "We offer a 14-day free trial that provides full access to our core features. No credit card required. Explore the AI assistant, research tools, and document management capabilities to evaluate how LEXA can transform your legal workflow.",
+  },
+  {
+    question: "How does LEXA's AI understand legal context?",
+    answer:
+      "Our AI is trained on extensive legal documents from Southeast Asian jurisdictions. Using advanced natural language processing and machine learning, we analyze case laws, statutes, and legal precedents to provide precise, contextually accurate insights.",
+  },
+  {
+    question: "When will LEXA be available for public?",
+    answer:
+      "Our public launch is planned for Q3 2025. We're currently in a private beta, refining features based on early user feedback. Professionals interested in early access can join our waitlist via Private Beta Registration to receive priority onboarding and exclusive beta testing opportunities.",
+  },
+];
 
+export default function FAQ() {
   return (
     <div className="flex items-center justify-center mt-20 md:mt-32 px-8 md:px-0">
       <div className="flex flex-col items-start justify-center w-full md:max-w-screen-lg">

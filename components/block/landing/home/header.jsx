@@ -7,17 +7,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
+const links = [
+  { href: "/product", label: "Product" },
+  { href: "/security", label: "Security" },
+  { href: "/news", label: "News" },
+  { href: "/sales", label: "Contact Sales" },
+];
+
 export default function Header() {
   const [showRegister, setShowRegister] = useState(false);
   const registerButton = useRef(null);
   const pathname = usePathname();
-
-  const links = [
-    { href: "/product", label: "Product" },
-    { href: "/security", label: "Security" },
-    { href: "/news", label: "News" },
-    { href: "/sales", label: "Contact Sales" },
-  ];
 
   useEffect(() => {
     const r = registerButton?.current;

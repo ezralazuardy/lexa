@@ -1,18 +1,18 @@
-export default function Jurisdiction() {
-  const southeastAsianCountries = [
-    { name: "🇸🇬 Singapore", supported: false },
-    { name: "🇲🇾 Malaysia", supported: false },
-    { name: "🇧🇳 Brunei", supported: false },
-    { name: "🇰🇭 Cambodia", supported: false },
-    { name: "🇮🇩 Indonesia", supported: true },
-    { name: "🇱🇦 Laos", supported: false },
-    { name: "🇵🇭 Philippines", supported: false },
-    { name: "🇹🇭 Thailand", supported: false },
-    { name: "🇻🇳 Vietnam", supported: false },
-    { name: "🇲🇲 Myanmar", supported: false },
-    { name: "🇹🇱 East Timor", supported: false },
-  ].sort((a, b) => b.supported - a.supported);
+const southeastAsianCountries = [
+  { name: "🇸🇬 Singapore", supported: false },
+  { name: "🇲🇾 Malaysia", supported: false },
+  { name: "🇧🇳 Brunei", supported: false },
+  { name: "🇰🇭 Cambodia", supported: false },
+  { name: "🇮🇩 Indonesia", supported: true },
+  { name: "🇱🇦 Laos", supported: false },
+  { name: "🇵🇭 Philippines", supported: false },
+  { name: "🇹🇭 Thailand", supported: false },
+  { name: "🇻🇳 Vietnam", supported: false },
+  { name: "🇲🇲 Myanmar", supported: false },
+  { name: "🇹🇱 East Timor", supported: false },
+].sort((a, b) => b.supported - a.supported);
 
+export default function Jurisdiction() {
   return (
     <div className="flex flex-col items-center justify-center mt-20 md:mt-32 px-8 md:px-0">
       <div className="flex flex-col items-center justify-center w-full md:max-w-screen-lg">

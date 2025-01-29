@@ -14,7 +14,7 @@ export default function HeroVideo({ children }) {
       v.play();
       timer1 = setTimeout(() => {
         v.classList.add("opacity-100");
-      }, 1000);
+      }, 200);
     };
 
     if (v) {

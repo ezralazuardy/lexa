@@ -4,9 +4,9 @@ import { getFeatures } from "@/lib/services/feature-service";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Feature() {
-  const features = getFeatures();
+const features = getFeatures();
 
+export default function Feature() {
   return (
     <div className="flex flex-col items-center justify-center md:mt-8 px-8 md:px-0">
       {features.map((feature, index) => (

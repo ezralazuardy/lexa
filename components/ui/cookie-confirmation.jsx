@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
-import { toast } from "sonner";
 import { Cookie } from "lucide-react";
 import Link from "next/link";
+import { useEffect } from "react";
+import { toast } from "sonner";
 
 const COOKIE_KEY = "cookie-confirmation";
 

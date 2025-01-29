@@ -1,33 +1,33 @@
 import { Bookmark, Database, Languages, Text } from "lucide-react";
 
-export default function UseCase() {
-  const usecases = [
-    {
-      icon: Languages,
-      title: "Translate into Multiple Languages",
-      description:
-        "Seamlessly translate legal documents and contracts into 16+ languages, ensuring clarity and precision across diverse jurisdictions and cultural contexts.",
-    },
-    {
-      icon: Bookmark,
-      title: "Automatically Source a Citation",
-      description:
-        "Save time and effort by automatically sourcing accurate citations for case laws, regulations, or legal precedents directly from trusted databases.",
-    },
-    {
-      icon: Database,
-      title: "Transfers Data Anywhere",
-      description:
-        "Effortlessly move your data between systems or platforms (Google Drive, DropBox, and more) with secure integrations.",
-    },
-    {
-      icon: Text,
-      title: "Summarize Instantly",
-      description:
-        "Quickly generate clear and concise summaries from lengthy legal documents, making it easier to identify critical information and key points at a glance.",
-    },
-  ];
+const usecases = [
+  {
+    icon: Languages,
+    title: "Translate into Multiple Languages",
+    description:
+      "Seamlessly translate legal documents and contracts into 16+ languages, ensuring clarity and precision across diverse jurisdictions and cultural contexts.",
+  },
+  {
+    icon: Bookmark,
+    title: "Automatically Source a Citation",
+    description:
+      "Save time and effort by automatically sourcing accurate citations for case laws, regulations, or legal precedents directly from trusted databases.",
+  },
+  {
+    icon: Database,
+    title: "Transfers Data Anywhere",
+    description:
+      "Effortlessly move your data between systems or platforms (Google Drive, DropBox, and more) with secure integrations.",
+  },
+  {
+    icon: Text,
+    title: "Summarize Instantly",
+    description:
+      "Quickly generate clear and concise summaries from lengthy legal documents, making it easier to identify critical information and key points at a glance.",
+  },
+];
 
+export default function UseCase() {
   return (
     <div className="flex flex-col items-center justify-center mt-20 md:mt-32">
       <div className="flex flex-col items-center justify-center w-full md:max-w-screen-lg">

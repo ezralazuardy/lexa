@@ -11,14 +11,14 @@ import security1 from "@/public/images/securities/security-1.png";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Security() {
-  const securities = [
-    {
-      image: security1,
-      title: "Security 1",
-    },
-  ];
+const securities = [
+  {
+    image: security1,
+    title: "Security 1",
+  },
+];
 
+export default function Security() {
   return (
     <div className="flex flex-col items-center justify-center mt-20 md:mt-32 px-8 md:px-0 md:flex-row">
       <div className="flex-col items-center justify-center w-full md:max-w-screen-lg">

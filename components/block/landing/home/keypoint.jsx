@@ -2,46 +2,46 @@ import { Button } from "@/components/ui/button";
 import { BookOpen, Brain, Cog, Scale, Scaling, Shield } from "lucide-react";
 import Link from "next/link";
 
-export default function Keypoint() {
-  const keypoints = [
-    {
-      icon: BookOpen,
-      title: "Readable",
-      description:
-        "Transform complex legal documents into clear, actionable insights you can trust.",
-    },
-    {
-      icon: Scaling,
-      title: "Scalable",
-      description:
-        "Powerful platform that grows with your practice, from solo work to enterprise teams.",
-    },
-    {
-      icon: Cog,
-      title: "Customizable",
-      description:
-        "Tailor the experience to your needs with custom templates and workflow automation.",
-    },
-    {
-      icon: Shield,
-      title: "Reliable",
-      description:
-        "Enterprise-grade security ensures your data and workflows are always protected.",
-    },
-    {
-      icon: Brain,
-      title: "Actionable",
-      description:
-        "AI-driven insights deliver real-time recommendations to support decisions.",
-    },
-    {
-      icon: Scale,
-      title: "Adaptable",
-      description:
-        "Integrates easily with your current legal tools and workflows for a seamless experience.",
-    },
-  ];
+const keypoints = [
+  {
+    icon: BookOpen,
+    title: "Readable",
+    description:
+      "Transform complex legal documents into clear, actionable insights you can trust.",
+  },
+  {
+    icon: Scaling,
+    title: "Scalable",
+    description:
+      "Powerful platform that grows with your practice, from solo work to enterprise teams.",
+  },
+  {
+    icon: Cog,
+    title: "Customizable",
+    description:
+      "Tailor the experience to your needs with custom templates and workflow automation.",
+  },
+  {
+    icon: Shield,
+    title: "Reliable",
+    description:
+      "Enterprise-grade security ensures your data and workflows are always protected.",
+  },
+  {
+    icon: Brain,
+    title: "Actionable",
+    description:
+      "AI-driven insights deliver real-time recommendations to support decisions.",
+  },
+  {
+    icon: Scale,
+    title: "Adaptable",
+    description:
+      "Integrates easily with your current legal tools and workflows for a seamless experience.",
+  },
+];
 
+export default function Keypoint() {
   return (
     <div className="flex flex-col items-center justify-center mt-20 md:mt-32">
       <div className="flex flex-col items-center justify-center w-full md:max-w-screen-lg">

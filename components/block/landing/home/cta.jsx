@@ -1,10 +1,10 @@
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Open_Sans from "@/lib/fonts/open-sans";
 import cta from "@/public/images/covers/cta.png";
 import { TestTubeDiagonal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 
 export default function CTA({ className }) {
   return (

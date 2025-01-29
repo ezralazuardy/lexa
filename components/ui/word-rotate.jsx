@@ -1,9 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
-
 import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "motion/react";
+import { useEffect, useState } from "react";
 
 export default function WordRotate({
   words,

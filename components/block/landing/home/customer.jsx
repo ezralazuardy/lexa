@@ -4,32 +4,32 @@ import customer3 from "@/public/images/customers/customer-3.png";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Customer() {
-  const customers = [
-    {
-      link: "https://lazuardy.tech",
-      src: customer1,
-      alt: "Customer 1",
-      height: 150,
-      width: 500,
-    },
-    {
-      link: "https://maps.app.goo.gl/jRvPprWppSS5EgJS7",
-      src: customer2,
-      alt: "Customer 2",
-      height: 150,
-      width: 500,
-      imageClass: "mb-0.5 mx-8 md:mx-20",
-    },
-    {
-      link: "https://lokari.id/kantor-advokat-pengacara-anwar-effendi-sh-mh-rekan-semarang_kXxLWq6E7r",
-      src: customer3,
-      alt: "Customer 3",
-      height: 150,
-      width: 500,
-    },
-  ];
+const customers = [
+  {
+    link: "https://lazuardy.tech",
+    src: customer1,
+    alt: "Customer 1",
+    height: 150,
+    width: 500,
+  },
+  {
+    link: "https://maps.app.goo.gl/jRvPprWppSS5EgJS7",
+    src: customer2,
+    alt: "Customer 2",
+    height: 150,
+    width: 500,
+    imageClass: "mb-0.5 mx-8 md:mx-20",
+  },
+  {
+    link: "https://lokari.id/kantor-advokat-pengacara-anwar-effendi-sh-mh-rekan-semarang_kXxLWq6E7r",
+    src: customer3,
+    alt: "Customer 3",
+    height: 150,
+    width: 500,
+  },
+];
 
+export default function Customer() {
   return (
     <div className="flex items-center justify-center w-full mt-6 px-8">
       {customers.map((customer, index) => (

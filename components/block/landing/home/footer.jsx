@@ -7,15 +7,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
+const links = [
+  { href: "/product", label: "Product" },
+  { href: "/security", label: "Security" },
+  { href: "/news", label: "News" },
+  { href: "/sales", label: "Contact Sales" },
+  { href: "/legal", label: "Legal" },
+];
+
 export default function Footer() {
   const pathname = usePathname();
-  const links = [
-    { href: "/product", label: "Product" },
-    { href: "/security", label: "Security" },
-    { href: "/news", label: "News" },
-    { href: "/sales", label: "Contact Sales" },
-    { href: "/legal", label: "Legal" },
-  ];
 
   useEffect(() => {
     const header = document.getElementById("header");

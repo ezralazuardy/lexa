@@ -1,8 +1,8 @@
 "use client";
 
+import HeroPrompt from "@/components/block/landing/home/hero-prompt";
 import { useEffect, useRef } from "react";
 import { Blurhash } from "react-blurhash";
-import HeroPrompt from "@/components/block/landing/home/hero-prompt";
 
 export default function HeroVideo() {
   const video = useRef(null);

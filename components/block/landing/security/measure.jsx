@@ -1,34 +1,34 @@
 import { KeyRound, Lock, LogIn, VenetianMask } from "lucide-react";
 import Link from "next/link";
 
-export default function Measure() {
-  const measures = [
-    {
-      icon: Lock,
-      title: "AES-256 Encryption Protocol",
-      description:
-        "LEXA protects your data with AES-256 encryption, the industry standard for robust and secure data encryption.",
-    },
-    {
-      icon: KeyRound,
-      title: "Secure Access Control",
-      description:
-        "Access is safeguarded with comprehensive user authentication, role-based controls, and the principle of least privilege.",
-    },
-    {
-      icon: VenetianMask,
-      title: "Context-Aware Privacy",
-      description:
-        "AI that respect privacy, processing data securely and aligning with strict confidentiality standards.",
-    },
-    {
-      icon: LogIn,
-      title: "Multi-Factor Authentication",
-      description:
-        "Extra layers of protection ensure only authorized users can access LEXA, enhancing system security.",
-    },
-  ];
+const measures = [
+  {
+    icon: Lock,
+    title: "AES-256 Encryption Protocol",
+    description:
+      "LEXA protects your data with AES-256 encryption, the industry standard for robust and secure data encryption.",
+  },
+  {
+    icon: KeyRound,
+    title: "Secure Access Control",
+    description:
+      "Access is safeguarded with comprehensive user authentication, role-based controls, and the principle of least privilege.",
+  },
+  {
+    icon: VenetianMask,
+    title: "Context-Aware Privacy",
+    description:
+      "AI that respect privacy, processing data securely and aligning with strict confidentiality standards.",
+  },
+  {
+    icon: LogIn,
+    title: "Multi-Factor Authentication",
+    description:
+      "Extra layers of protection ensure only authorized users can access LEXA, enhancing system security.",
+  },
+];
 
+export default function Measure() {
   return (
     <div className="flex flex-col items-center justify-center mt-16 md:mt-24">
       <div className="flex flex-col items-center justify-center w-full">

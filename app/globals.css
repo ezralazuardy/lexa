@@ -81,10 +81,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.tally-page {
-    padding: 0;
-}
-
 .article-content p {
     margin-bottom: 2rem;
 }
@@ -158,13 +154,6 @@ body {
     list-style-type: disc;
 }
 
-@media (max-width: 640px) {
-    .article-content ul {
-        padding-left: 0.8rem;
-        padding-right: 1rem;
-    }
-}
-
 .article-content li {
     margin-bottom: 0.5rem;
 }
@@ -172,4 +161,19 @@ body {
 .article-content address {
     font-style: normal;
     margin-bottom: 1rem;
+}
+
+@media (max-width: 640px) {
+    .article-content p {
+        margin-bottom: 1.2rem;
+    }
+
+    .article-content section {
+        margin-bottom: 2.2rem;
+    }
+
+    .article-content ul {
+        padding-left: 1.2rem;
+        padding-right: 1rem;
+    }
 }
