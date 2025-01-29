@@ -1,12 +1,12 @@
 import WordRotate from "@/components/ui/word-rotate";
 import Open_Sans from "@/lib/fonts/open-sans";
-import { shuffleArray } from "@/lib/utils";
 
 const words = [
   "A Brilliant Lawyer",
   "A Startup Founder",
-  "An Ambitious Founder",
   "An Investigative Expert",
+  "An Ambitious Founder",
+  "The Modern Law Firms",
   "The Business Owners",
   "The Corporate Legal Divisions",
   "The Dispute Resolution Experts",
@@ -22,12 +22,9 @@ const words = [
   "The Legal Consultants",
   "The Legal Innovators",
   "The Legal Professionals",
-  "The Modern Law Firms",
 ];
 
 export default function HeroTitle() {
-  const shuffledWords = shuffleArray(words);
-
   return (
     <div className="flex-col items-center justify-center w-full">
       <h1
@@ -37,7 +34,7 @@ export default function HeroTitle() {
         <br className="md:hidden" />
         Assistant for
         <WordRotate
-          words={shuffledWords}
+          words={words}
           duration="4000"
           className="-mt-2 pt-0.5 md:mt-2 md:pt-0 min-h-[13vh] md:min-h-max"
         />

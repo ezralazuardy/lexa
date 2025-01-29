@@ -33,7 +33,7 @@ export default function Beta() {
         height="100%"
         className={`border-0 m-0 w-full h-full min-h-screen transition-opacity duration-1000 ${loading ? "opacity-0" : "opacity-100"}`}
       ></iframe>
-      <div className="absolute right-0 md:right-2 bottom-0 w-full md:w-[20vw] h-[8vh] md:h-[40vh] bg-white overflow-hidden"></div>
+      <div className="absolute right-0 md:right-2 bottom-0 w-full md:w-[30vw] lg:w-[20vw] h-[5vh] md:h-[40vh] bg-white overflow-hidden"></div>
       <Script src="https://tally.so/widgets/embed.js" strategy="lazyOnload" />
     </div>
   );
