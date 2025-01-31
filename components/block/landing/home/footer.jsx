@@ -46,7 +46,7 @@ export default function Footer() {
         observer.unobserve(footer);
       }
     };
-  });
+  }, []);
 
   return (
     <footer

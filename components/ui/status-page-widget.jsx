@@ -7,12 +7,15 @@ export default function StatusPageWidget() {
   const [statusData, setStatusData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const statusPageUrl = process.env.NEXT_PUBLIC_STATUS_PAGE_URL ?? null;
 
   useEffect(() => {
-    const fetchStatus = async () => {
+    if (!process.env.NEXT_PUBLIC_STATUS_PAGE_API_URL) return;
+
+    async function fetchStatus() {
       try {
-        const response = await fetch(statusPageUrl);
+        const response = await fetch(
+          process.env.NEXT_PUBLIC_STATUS_PAGE_API_URL,
+        );
         if (!response.ok) {
           throw new Error("Failed to fetch status data");
         }
@@ -23,12 +26,12 @@ export default function StatusPageWidget() {
       } finally {
         setLoading(false);
       }
-    };
+    }
 
     fetchStatus();
   }, []);
 
-  if (!statusPageUrl) {
+  if (!process.env.NEXT_PUBLIC_STATUS_PAGE_API_URL) {
     return <div></div>;
   }
 

@@ -8,7 +8,7 @@ import { forwardRef, useEffect, useRef } from "react";
 export default function Form() {
   const loader = useRef(null);
   const form = useRef(null);
-  let timer1;
+  let timer1, timer2;
 
   useEffect(() => {
     const l = loader?.current;
@@ -23,15 +23,18 @@ export default function Form() {
       (timer1 = setTimeout(() => {
         l.classList.add("opacity-0");
         l.classList.remove("opacity-100");
+        timer2 = setTimeout(() => {
+          l.classList.add("hidden");
+        }, 1000);
       }, 1000));
 
     document.body.appendChild(script);
 
     return () => {
-      clearTimeout(timer1);
+      clearTimeout(timer1, timer2);
       document.body.removeChild(script);
     };
-  });
+  }, []);
 
   return (
     <div className="flex flex-col items-center justify-center mt-2">

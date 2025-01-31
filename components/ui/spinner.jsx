@@ -1,9 +1,13 @@
 import { Loader } from "lucide-react";
+import { forwardRef } from "react";
 
-export default function Spinner({ className }) {
+const Spinner = forwardRef(function ({ className }, ref) {
   return (
     <Loader
-      className={`animate-spin text-gray-900 h-8 w-8 md:h-10 md:w-10 ${className}`}
+      ref={ref}
+      className={`animate-spin text-gray-900 h-6 w-6 md:h-8 md:w-8 ${className}`}
     />
   );
-}
+});
+
+export default Spinner;

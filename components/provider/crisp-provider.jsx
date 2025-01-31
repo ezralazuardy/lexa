@@ -9,7 +9,7 @@ export default function CrispProvider() {
     Crisp.configure(process.env.NEXT_PUBLIC_CRISP_WEBSITE_ID, {
       cookieExpire: 31536000,
     });
-  });
+  }, []);
 
   return null;
 }

@@ -20,7 +20,7 @@ export default function HeroVideo() {
         timer2 = setTimeout(() => {
           p.classList.add("opacity-100");
         }, 500);
-      }, 1000);
+      }, 500);
     };
 
     if (v) {
@@ -37,7 +37,7 @@ export default function HeroVideo() {
         v.load();
       }
     };
-  });
+  }, []);
 
   return (
     <div className="flex items-center justify-center w-full md:max-w-screen-lg">

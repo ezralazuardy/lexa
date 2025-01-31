@@ -47,7 +47,7 @@ export default function Header() {
         observer.unobserve(heroRegisterButton);
       }
     };
-  });
+  }, []);
 
   return (
     <div id="header" className="fixed top-0 left-0 right-0 flex-col z-50">
