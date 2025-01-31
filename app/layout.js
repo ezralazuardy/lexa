@@ -1,11 +1,14 @@
-import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "@/components/ui/sonner";
+import ComponentProvider from "@/components/provider/component-provider";
+import CookieProvider from "@/components/provider/cookie-provider";
+import GoogleProvider from "@/components/provider/google-provider";
+import VercelProvider from "@/components/provider/vercel-provider";
 import Inter from "@/lib/fonts/inter";
-import { GoogleTagManager } from "@next/third-parties/google";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import dynamic from "next/dynamic";
 import "./globals.css";
+
+const CrispProvider = dynamic(
+  () => import("@/components/provider/crisp-provider"),
+);
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL),
@@ -60,34 +63,17 @@ export const viewport = {
   themeColor: [{ color: "#171717" }],
 };
 
-const Crisp = dynamic(() => import("@/components/crisp"));
-
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      {process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID && (
-        <GoogleTagManager
-          gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID}
-        />
-      )}
+    <html lang="en">
       <body className={`${Inter.className}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
-        <Toaster position="bottom-left" />
-        {process.env.NODE_ENV === "production" && (
-          <>
-            <Analytics mode="production" />
-            <SpeedInsights />
-          </>
-        )}
-        <Crisp />
+        {children}
+        <ComponentProvider />
+        <CookieProvider />
+        <CrispProvider />
+        <VercelProvider />
       </body>
+      <GoogleProvider />
     </html>
   );
 }

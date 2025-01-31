@@ -19,7 +19,7 @@ export default function Jurisdiction() {
         <span className="w-full md:max-w-xl text-neutral-600 font-regular text-sm text-center">
           Regional Focus
         </span>
-        <h1 className="w-full md:max-w-xl mt-4 md:mt-6 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-4xl md:text-5xl font-medium leading-snug md:leading-tight text-transparent dark:from-white dark:to-slate-900/10 px-8 md:px-0">
+        <h1 className="w-full md:max-w-xl mt-4 md:mt-6 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-4xl md:text-5xl font-medium leading-snug md:leading-tight text-transparent px-8 md:px-0">
           Fine Tuned for Southeast Asian Jurisdiction
         </h1>
         <p className="w-full md:max-w-4xl text-md font-light text-neutral-600 text-justify md:text-center leading-snug mt-6 md:mt-8 md:px-0">

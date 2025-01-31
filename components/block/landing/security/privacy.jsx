@@ -8,7 +8,7 @@ export default function Privacy() {
         <span className="text-neutral-600 font-regular text-sm text-center">
           Data Privacy
         </span>
-        <h1 className="w-full md:max-w-3xl mt-4 md:mt-6 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-4xl md:text-5xl font-medium leading-snug md:leading-tight text-transparent dark:from-white dark:to-slate-900/10 px-8 md:px-0">
+        <h1 className="w-full md:max-w-3xl mt-4 md:mt-6 pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-4xl md:text-5xl font-medium leading-snug md:leading-tight text-transparent px-8 md:px-0">
           AI that Understand Your Privacy
         </h1>
         <div className="flex justify-center items-center py-10 md:py-12 opacity-60">
