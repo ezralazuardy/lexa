@@ -5,7 +5,7 @@ import ArticleContent from "@/components/block/landing/legal/article-content";
 import ArticleHeader from "@/components/block/landing/legal/article-header";
 import { getLegalByUuid } from "@/lib/services/legal-service";
 
-export default async function Article({ params }) {
+export default async function LegalDetail({ params }) {
   const { slug } = await params;
 
   const data = await getLegalByUuid(slug);

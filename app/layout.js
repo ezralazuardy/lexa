@@ -60,6 +60,7 @@ export const metadata = {
 };
 
 export const viewport = {
+  maximumScale: 1, // disable auto-zoom on mobile safari
   themeColor: [{ color: "#171717" }],
 };
 

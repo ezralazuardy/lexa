@@ -2,7 +2,6 @@
 const nextConfig = {
   experimental: {
     reactCompiler: true,
-    webpackMemoryOptimizations: true,
     optimizePackageImports: [
       "@next/third-parties",
       "@radix-ui/react-accordion",
